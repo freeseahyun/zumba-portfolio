@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ZumbaFlow | Captured Energy Gallery</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff00cc",
+                        "lime-accent": "#CCFF00",
+                        "background-light": "#f8f5f8",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #1A1A1A;
+        }
+
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 1.5rem;
+        }
+
+        .masonry-item-tall {
+            grid-row: span 2;
+        }
+
+        .masonry-item-wide {
+            grid-column: span 2;
+        }
+
+        .neon-glow {
+            text-shadow: 0 0 10px rgba(255, 0, 204, 0.5);
+        }
+
+        .lime-glow {
+            text-shadow: 0 0 10px rgba(204, 255, 0, 0.4);
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background-color: rgba(26, 26, 26, 0.8);
+        }
+
+        .video-blur {
+            filter: blur(4px);
+            transition: filter 0.3s ease;
+        }
+
+        .video-card:hover .video-blur {
+            filter: blur(0px);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-white font-display">
+    <!-- Sticky Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-primary/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span
+                    class="text-2xl font-extrabold text-lime-accent lime-glow tracking-tighter italic">ZumbaFlow</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide uppercase">
+                <a class="hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="hover:text-primary transition-colors" href="about.html">About</a>
+                <a class="hover:text-primary transition-colors" href="classes.html">Classes</a>
+                <a class="text-primary" href="#">Gallery</a>
+                <a class="hover:text-primary transition-colors" href="#">Testimonials</a>
+                <a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
+            </div>
+            <button
+                class="bg-primary text-white px-8 py-2.5 rounded-full font-bold shadow-[0_0_20px_rgba(255,0,204,0.4)] hover:shadow-[0_0_30px_rgba(255,0,204,0.6)] transition-all transform hover:-translate-y-0.5">
+                BOOK NOW
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
+            <img alt="Zumba Fitness Energy" class="w-full h-full object-cover"
+                data-alt="Dynamic collage of high energy dance class"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN48xaNpIz84N7JKX_DXMVBzsDj5fK1mhamOjg8ne9aBuidie3uX4FjgNJk7qc1AW9GcOYhYqUxC_HDSB15qKP3aH7XuUDEdri81imZre6ILL1fKCYGxl9uvGo6kgw30mjtXJTEG1j12uuByEeiDvcAnuVcO2V0bhp0Kb-dRZiKpHZnosrDAH3BBJJvidzB1xP_wC2GXR1ksFngBpdtXxLVqSGvXzoFCFyeAjTkbMVzwqIxnsiW9b0cIevjnQ6y3fV7WD9jdePAg" />
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+            <h1
+                class="text-8xl md:text-[10rem] font-extrabold leading-none tracking-tighter italic text-white drop-shadow-2xl">
+                CAPTURED<br /><span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-lime-accent">ENERGY</span>
+            </h1>
+            <p class="mt-6 text-xl text-white/70 max-w-2xl mx-auto font-medium">
+                Every drop of sweat, every beat, every smile. Experience the rhythm of the ZumbaFlow community through
+                our lens.
+            </p>
+        </div>
+    </header>
+    <!-- Filter Tabs -->
+    <section class="max-w-7xl mx-auto px-6 mb-12">
+        <div class="flex flex-wrap justify-center gap-4">
+            <button
+                class="px-8 py-3 rounded-full bg-primary text-white font-bold text-sm tracking-widest shadow-lg shadow-primary/20">ALL</button>
+            <button
+                class="px-8 py-3 rounded-full border border-lime-accent text-lime-accent hover:bg-lime-accent hover:text-black font-bold text-sm tracking-widest transition-all">CLASSES</button>
+            <button
+                class="px-8 py-3 rounded-full border border-lime-accent text-lime-accent hover:bg-lime-accent hover:text-black font-bold text-sm tracking-widest transition-all">EVENTS</button>
+            <button
+                class="px-8 py-3 rounded-full border border-lime-accent text-lime-accent hover:bg-lime-accent hover:text-black font-bold text-sm tracking-widest transition-all">COMMUNITY</button>
+            <button
+                class="px-8 py-3 rounded-full border border-lime-accent text-lime-accent hover:bg-lime-accent hover:text-black font-bold text-sm tracking-widest transition-all">BEHIND
+                THE SCENES</button>
+        </div>
+    </section>
+    <!-- Masonry Photo Grid -->
+    <section class="max-w-7xl mx-auto px-6 mb-24">
+        <div class="masonry-grid">
+            <!-- Item 1 -->
+            <div
+                class="relative group overflow-hidden rounded-xl border-2 border-transparent hover:border-primary transition-all duration-500 masonry-item-tall">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="Close up of dancer in motion"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJtcu-DbobUJVfCcvaNXKdLW1o5QT1_OwrgMKBzdq0jmDArGssPq8UdCBZdwH8VHM_m16gFJCbj2xjG-QwWdP8bngABMt5h4Sg2BlEoPhmR_115ofIvcV36b6f4Xea5GAmU2O6zvja1BCEZ7WubRy9scwGbCpKpT-M86uUy7Zn3pdxaYWgLMgCQbvlGHvCjivUquz_i5IaIAth237kwiWmMBABe4mjqoGFTgSofISe5NvlmNSplfYNFWakajDeP1CMmh8QICsGcQ" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                    <span class="text-xs font-bold tracking-widest uppercase text-lime-accent">Summer Heat Event</span>
+                    <h3 class="text-xl font-bold">Zumba After Dark</h3>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div
+                class="relative group overflow-hidden rounded-xl border-2 border-transparent hover:border-primary transition-all duration-500">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="Group of people jumping in dance class"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbP-tTg5rLIg3YUxswCtT4_FZgzCK_Vy9JcgGzIrT1CA_krc2huGtGoa5r1zVb4Zzt8feVBuOkggk5b3pitlqghHJ6KWzBX8ZcEnbEz6BARqwidkjCXWTWIVKtgXx0w51LfD4ieHh17mK95l5BmCmjPUY57TB_khTReI2wPPPHjEQzn4nVFKpaN9lN808iDWKymz1QJ9ZsmjbFRB78J3_pWGCg9c81vrNLbUlRe_Vo1zsr3f6X1ZIi5dJRhIxx3zUaFlG2VwTl2A" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                    <span class="text-xs font-bold tracking-widest uppercase text-lime-accent">Weekly Masterclass</span>
+                    <h3 class="text-xl font-bold">Energy Peak</h3>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div
+                class="relative group overflow-hidden rounded-xl border-2 border-transparent hover:border-primary transition-all duration-500 masonry-item-wide">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="Wide shot of a crowded zumba studio"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfSsPPcbltKnwbaXfrCOudC8455_tCKQihxWPNxCN7oGGg4U4ZA3nJ0XT139vGfU6tBAfTj3BChPFFaFTuAqaDEgy8RvGq8TkE8R7zBOBHME82sCFcdF2YuiDuLHrzRT4XOoDvqwRJ4smzGdRnrQcG6JQDGjObab6W4TFf56k6qSffFQewN0gsUz4lze4-vXBq3gXSf4GJKrDgqS6s_IFSZD3DMRyKRL6d6xONZzXBQOPDU_zauAAFh8h76azlBYYxfNvBEAaueA" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                    <span class="text-xs font-bold tracking-widest uppercase text-lime-accent">Community</span>
+                    <h3 class="text-xl font-bold">Full House Fridays</h3>
+                </div>
+            </div>
+            <!-- Item 4 -->
+            <div
+                class="relative group overflow-hidden rounded-xl border-2 border-transparent hover:border-primary transition-all duration-500">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="Instructor leading a dance class"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoUNud847ljDwGe6OocsQHRv6bagsnop9dw-prXKZIC4f71R_PM9NtF8AfRr8NfxjiT3TpenuQlWu6FsqQ3LjMbYXTgOi2-9fSfHyC4W4JlfiPZwP-r1bVV-XzQ9JJg5jzxz-DX7sOluc7DZGRl37WY7EyW7FblrFoy1RjAgDIhYrthWLuxXl4N6y7Dbw4ZmlN5w-WLT4Ojy9_qRj2q3UbHwVY8_co8J2UAlqLjN51tl3QuRI2WvwEQzpFt0vg1I5ayTkOIZN_kQ" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                    <span class="text-xs font-bold tracking-widest uppercase text-lime-accent">Behind the Scenes</span>
+                    <h3 class="text-xl font-bold">Choreo Prep</h3>
+                </div>
+            </div>
+            <!-- Item 5 -->
+            <div
+                class="relative group overflow-hidden rounded-xl border-2 border-transparent hover:border-primary transition-all duration-500 masonry-item-tall">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="Silhouette of dancers in a gym"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi0GCoVOzs0tqZCKyB_7UmGOAlrBkh4OxEDTA9byygpqdkQ7JdE5NgrsvjefrGY0K5joblUU0QRlp7TSMbzogD3bjWfIPtqsm0J4h5vGnwZq5RbydUV-RzlWNVqRLA8aPGQA6n9RdrBdpie2WoNSIU_YhDYsufp-NaHz19g_vzW8OR9AQ9M8P_Rc747yz5pr85v1vi8JneKwXq6VCIY2w0P78PkJGEOEKg2LVc7j-LWFhyTHitzlyOmRNA2ALFu32as2TQJxY0Tg" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                    <span class="text-xs font-bold tracking-widest uppercase text-lime-accent">Vibe</span>
+                    <h3 class="text-xl font-bold">Neon Rhythms</h3>
+                </div>
+            </div>
+            <!-- Item 6 -->
+            <div
+                class="relative group overflow-hidden rounded-xl border-2 border-transparent hover:border-primary transition-all duration-500">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="Person drinking water after zumba"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRzb7NhRUThpEEc2xX8_5pFufTqZSdABXyl5fUu4HYpBfoQ0XBrbq79wWIatXw6d3haW5zq6PcPgdrthLK_OZT-RKnZn7l7A6SMOVT8MTNfFfhDJ_yygzZx11XMQmJytCML3-hl5a8dRz9lQrMPTi5P-73jxj-h_Vfv_YOGkG42ntL6QPtqQStHu75rEu9d7rKcKZmGWeTHxI8pnzvK2DDWCliOXnapUYbh0s2qUNkWttWohbvkFVuw_btY1J8jB5q1nbKCa5fxA" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                    <span class="text-xs font-bold tracking-widest uppercase text-lime-accent">Community</span>
+                    <h3 class="text-xl font-bold">Post-Class Glow</h3>
+                </div>
+            </div>
+            <!-- Item 7 -->
+            <div
+                class="relative group overflow-hidden rounded-xl border-2 border-transparent hover:border-primary transition-all duration-500 masonry-item-wide">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="Outdoor zumba festival crowd"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb6_vilzPcWQwAXZB-aJVE33vPHLSLPx3tVWr0TMBuNwnSoh-LN6FH_iuYTirMhI7NCaXEMoLBma57drTPgnxNlF2mQqFrNlPBAlWIGdpzM8WsSePkSEMim5Jb3N5oMJ-6rvwSYTD3PVqXsk7opV2rkMSaYvIWBvml1xvt0zk73nRpGbbI4DWD7aj2yAwxiMfsDZeot3GVChROwsDGFvIV9m7iOq73CTqVvixOFaX87WUPKhEN-WkXLPvJUBdqwbBk47DQwCToMA" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                    <span class="text-xs font-bold tracking-widest uppercase text-lime-accent">Special Event</span>
+                    <h3 class="text-xl font-bold">Zumba In The Park 2024</h3>
+                </div>
+            </div>
+            <!-- Item 8 -->
+            <div
+                class="relative group overflow-hidden rounded-xl border-2 border-transparent hover:border-primary transition-all duration-500">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    data-alt="Focus shot of gym shoes moving"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuARM-bXNGxvop5u-52pd9xtVLWjS6DGrQWIYsfuA69EQzYFDPWJrMRlR5mCRB8U5HXoZ89V_GTr08puMTn5vtLIgNslTneyntorM6_eOcvgPSpoy_QXRnPrs7Qj18hDqCDn1f4sCibWfctIgMYuF9W1BzAYNowlfiVKrguFjM-335Sf_2_8ac4EhqLzzkhvE8KpE5djSE_ckfoOTVZ1sfMpWu48SgAgxW9vXO9dn4MSRSnJPYdPt8gBPh4SLGih2_w6Gg-CCVuNXw" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                    <span class="text-xs font-bold tracking-widest uppercase text-lime-accent">Classes</span>
+                    <h3 class="text-xl font-bold">Footwork Focus</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Highlights Section -->
+    <section class="bg-background-dark py-24 border-y border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">
+            <div>
+                <h2 class="text-4xl font-extrabold tracking-tighter uppercase italic"><span
+                        class="text-primary">Motion</span> Highlights</h2>
+                <p class="text-white/50">Feel the bass, see the flow.</p>
+            </div>
+            <div class="flex space-x-4">
+                <button
+                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all">
+                    <span class="material-icons">chevron_left</span>
+                </button>
+                <button
+                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all">
+                    <span class="material-icons">chevron_right</span>
+                </button>
+            </div>
+        </div>
+        <div class="flex space-x-8 px-6 overflow-x-auto no-scrollbar pb-10">
+            <!-- Video 1 -->
+            <div class="min-w-[450px] video-card relative group cursor-pointer overflow-hidden rounded-2xl">
+                <div class="absolute inset-0 bg-black/40 z-10 group-hover:bg-black/20 transition-all"></div>
+                <img class="w-full h-[300px] object-cover video-blur" data-alt="Crowd dancing at a zumba party"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpRSHjQVwUtN2R51V7tRBbQzIah4j9yi-LQaIqmm31VjnGUQGkNAL_oyKLf7oNNobbCmJyIYIAY2JieRYTiKTxQWdcVW1kvwzOPL8am3J1P6S-EJQTKvR3SS2d1N2goq2UHZoj_073JySEeA7fhukGbeWnq2MPG78-rd1-OJdnf1jRpFrV5k2WJJgWsoytqEBuiwqJt3PLRXgwOr1gM5QvVzJrom1b0HGZbldu38vu36dBQST2FvpHxYN05q5r29upo-4Ic4mthA" />
+                <div class="absolute inset-0 z-20 flex items-center justify-center">
+                    <div
+                        class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,0,204,0.6)] group-hover:scale-110 transition-transform">
+                        <span class="material-icons text-4xl ml-1">play_arrow</span>
+                    </div>
+                </div>
+                <div class="absolute bottom-6 left-6 z-20">
+                    <p class="text-xs font-bold text-lime-accent uppercase">Highlights</p>
+                    <h4 class="text-xl font-bold">Epic Cardio Session</h4>
+                </div>
+            </div>
+            <!-- Video 2 -->
+            <div class="min-w-[450px] video-card relative group cursor-pointer overflow-hidden rounded-2xl">
+                <div class="absolute inset-0 bg-black/40 z-10 group-hover:bg-black/20 transition-all"></div>
+                <img class="w-full h-[300px] object-cover video-blur" data-alt="Vibrant zumba workout in progress"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD1gtgmPoTdstYVqnDWpcn47E9D_zibLZBoWXt5GwvDyek4S5NpFpQuSt4MOFiszc7YSp60kO-1a4lzKFh--2gRoJKfwX7mP6uafmJIsgai8AfHovMAAE64JJo5qzSRoQuT5IcQG1KQ9Gd0VlClQFq8_pObc4F-Quce8eKzqrtyPeC23LbS5aGdpMX5IZSC1DYegvIf2ZhJQR9tUoqbTPJwq2G-l-ALzeIubhoYPpVe1oORIR2HMGjw2TfGCG6fmM1LYxfLr8pDw" />
+                <div class="absolute inset-0 z-20 flex items-center justify-center">
+                    <div
+                        class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,0,204,0.6)] group-hover:scale-110 transition-transform">
+                        <span class="material-icons text-4xl ml-1">play_arrow</span>
+                    </div>
+                </div>
+                <div class="absolute bottom-6 left-6 z-20">
+                    <p class="text-xs font-bold text-lime-accent uppercase">Choreography</p>
+                    <h4 class="text-xl font-bold">Reggaeton Remix Flow</h4>
+                </div>
+            </div>
+            <!-- Video 3 -->
+            <div class="min-w-[450px] video-card relative group cursor-pointer overflow-hidden rounded-2xl">
+                <div class="absolute inset-0 bg-black/40 z-10 group-hover:bg-black/20 transition-all"></div>
+                <img class="w-full h-[300px] object-cover video-blur" data-alt="Energetic group dance session"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVncvsboBXu0mqhQ3eG_SpTUtEU6vOUBBENBT2GspBwDeAB_9nmfdmig4-DcfJRo5tLKygpMrIzXEBrXL4hOHk7srwm7gYXITSPf9DzBtqf3uDYjQCuPUTyiCLPrKx_gPkwNFNwDLKWk4vZemrrA5E3dySHUNz5o2BO3Nxupw_7zBdcwqS5Hr2M0rO4-Atx_aFOB6RtRvL95zQEKqO1ua3BtdfZ1PUustj9MpqR57Zvb3A2JlnlMLW51v13SUYCB-jvY2VRTUqag" />
+                <div class="absolute inset-0 z-20 flex items-center justify-center">
+                    <div
+                        class="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,0,204,0.6)] group-hover:scale-110 transition-transform">
+                        <span class="material-icons text-4xl ml-1">play_arrow</span>
+                    </div>
+                </div>
+                <div class="absolute bottom-6 left-6 z-20">
+                    <p class="text-xs font-bold text-lime-accent uppercase">Events</p>
+                    <h4 class="text-xl font-bold">Midnight Glow Dance</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div
+            class="bg-gradient-to-r from-background-dark to-primary/20 rounded-xl p-12 border border-primary/30 flex flex-col md:flex-row items-center justify-between">
+            <div class="text-center md:text-left mb-8 md:mb-0">
+                <h2 class="text-5xl font-extrabold tracking-tighter mb-4">WANT TO BE PART<br />OF THE ACTION?</h2>
+                <p class="text-white/70 max-w-md">Join our next high-energy session and let the music move you. No
+                    experience needed, just good vibes.</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <button
+                    class="px-12 py-5 bg-primary text-white text-xl font-extrabold rounded-full shadow-[0_0_40px_rgba(255,0,204,0.4)] hover:scale-105 transition-all tracking-widest uppercase">
+                    Join a Class
+                </button>
+                <p class="mt-4 text-lime-accent text-sm font-bold">First class is 50% OFF!</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-background-dark pt-20 pb-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <span
+                        class="text-3xl font-extrabold text-lime-accent tracking-tighter italic block mb-6">ZumbaFlow</span>
+                    <p class="text-white/50 max-w-sm mb-8">Elevate your energy, discover your rhythm, and join the most
+                        vibrant fitness community in the city.</p>
+                    <div class="flex space-x-6">
+                        <a class="text-primary hover:text-white transition-colors" href="#">
+                            <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="text-primary hover:text-white transition-colors" href="#">
+                            <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.01.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.11-2.85-.56-4.06-1.35zM12.53 19.22c-1.42.06-2.85-.24-4.14-.85-1.12-.55-2.09-1.42-2.72-2.51-.62-1.07-.94-2.31-.93-3.55.01-1.24.34-2.48.98-3.54.63-1.05 1.58-1.9 2.69-2.43 1.25-.6 2.64-.88 4.02-.83.01 1.33.01 2.66.02 3.99-1.13-.06-2.3.2-3.23.86-1.03.72-1.52 2-1.34 3.25.1 1.12.87 2.13 1.93 2.53.91.38 1.96.42 2.9.11 1.15-.36 2.06-1.25 2.45-2.36.21-.63.29-1.3.26-1.96v-5.69c1.33 0 2.66.01 3.99.01v12.23c-.01 1.33-.01 2.66-.02 3.99-1.32.01-2.65.01-3.97.02l-.02-1.4c-.63.78-1.45 1.4-2.38 1.79-.9.39-1.9.54-2.87.5z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-6 text-white uppercase text-sm tracking-widest">Navigation</h5>
+                    <ul class="space-y-4 text-white/50 text-sm font-medium">
+                        <li><a class="hover:text-primary transition-colors" href="#">Class Schedule</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Pricing Plans</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Merchandise</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-6 text-white uppercase text-sm tracking-widest">Pulse Newsletter</h5>
+                    <p class="text-xs text-white/40 mb-4">Get playlists and class updates directly.</p>
+                    <div class="relative">
+                        <input
+                            class="w-full bg-white/5 border border-white/10 rounded-full py-3 px-6 text-sm focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none"
+                            placeholder="Email Address" type="email" />
+                        <button
+                            class="absolute right-2 top-1.5 bg-primary p-2 rounded-full hover:scale-105 transition-transform">
+                            <span class="material-icons text-white text-sm">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-white/30">
+                <p>© 2024 ZumbaFlow Fitness. All dance moves reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a class="hover:text-white" href="#">Privacy Policy</a>
+                    <a class="hover:text-white" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

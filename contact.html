@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ZumbaFlow | Contact &amp; Booking</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff00cc",
+                        "lime-accent": "#CCFF00",
+                        "cyan-accent": "#00FFFF",
+                        "background-light": "#f8f5f8",
+                        "background-dark": "#0a0509", // Deep darkened version of primary hue
+                        "neutral-dark": "#1a0d17",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(26, 13, 23, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 0, 204, 0.2);
+        }
+
+        .neon-glow-pink {
+            box-shadow: 0 0 20px rgba(255, 0, 204, 0.4);
+        }
+
+        .neon-glow-lime {
+            box-shadow: 0 0 20px rgba(204, 255, 0, 0.4);
+        }
+
+        .neon-glow-cyan {
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+        }
+
+        .text-glow-primary {
+            text-shadow: 0 0 10px rgba(255, 0, 204, 0.6);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/30">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-lime-accent font-black text-2xl tracking-tighter italic">ZumbaFlow</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide uppercase">
+                <a class="hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="hover:text-primary transition-colors" href="classes.html">Classes</a>
+                <a class="hover:text-primary transition-colors" href="#">Schedule</a>
+                <a class="text-primary underline underline-offset-8" href="#">Contact</a>
+            </div>
+            <button
+                class="bg-primary hover:bg-primary/80 text-white px-8 py-3 rounded-full font-bold transition-all transform hover:scale-105 neon-glow-pink">
+                BOOK NOW
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <img alt="Let's Connect"
+                class="w-full h-full object-cover opacity-40 grayscale hover:grayscale-0 transition-all duration-1000"
+                data-alt="High energy zumba group high five action"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ2DkmduXpg7G5m2_Q8dLppM2uONi8moQueVel5rPxuvgCcVQfhytuTKcdl_rvO_UQ1cPD8b8EP1ZE6HV1MM6CpMjqTvJ4GmJZclWyfennKD2d10quNQVEZUi1sJ-ubFIEIMTb6wzqd4UaCU9M4JDK49qhUNcxCAws61usia_Uh5_kRo_TQikWPyjDSGgPrWZHeR8VEAv-o1hlLII0vFMKInwt4A8jPWpn9cuAOhvqdw4TWQsBjkvOXQiKdoCdxzMaPRRP_N9-Mg" />
+            <div
+                class="absolute inset-0 bg-gradient-to-b from-background-dark/20 via-background-dark/60 to-background-dark">
+            </div>
+        </div>
+        <div class="relative z-10 text-center space-y-4 px-6">
+            <h1 class="text-7xl md:text-9xl font-black italic tracking-tighter text-white uppercase leading-none">
+                Let's <span class="text-primary text-glow-primary italic">Connect</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-medium">
+                Ready to turn up the heat? Book your spot and join the rhythm.
+            </p>
+        </div>
+    </section>
+    <!-- Booking Form Section -->
+    <section class="relative z-20 -mt-24 px-6 pb-24">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-card p-8 md:p-12 rounded-xl shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-slate-400">Full Name</label>
+                        <input
+                            class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                            placeholder="John Doe" type="text" />
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-slate-400">Email Address</label>
+                        <input
+                            class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                            placeholder="john@example.com" type="email" />
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-slate-400">Phone Number</label>
+                        <input
+                            class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                            placeholder="+1 (555) 000-0000" type="tel" />
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-slate-400">Class Interest</label>
+                        <select
+                            class="w-full bg-neutral-dark border border-white/10 rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all appearance-none text-slate-300">
+                            <option>Zumba Power</option>
+                            <option>Aqua Rhythm</option>
+                            <option>Zumba Toning</option>
+                            <option>Latin Fusion</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2 md:col-span-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-slate-400">Preferred Day</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <button
+                                class="py-3 px-4 rounded-lg bg-white/5 border border-white/10 hover:border-primary hover:text-primary transition-all text-sm font-semibold">Mon
+                                / Wed</button>
+                            <button
+                                class="py-3 px-4 rounded-lg bg-white/5 border border-white/10 hover:border-primary hover:text-primary transition-all text-sm font-semibold">Tue
+                                / Thu</button>
+                            <button
+                                class="py-3 px-4 rounded-lg bg-white/5 border border-white/10 hover:border-primary hover:text-primary transition-all text-sm font-semibold">Friday
+                                Night</button>
+                            <button
+                                class="py-3 px-4 rounded-lg bg-white/5 border border-white/10 hover:border-primary hover:text-primary transition-all text-sm font-semibold">Weekend</button>
+                        </div>
+                    </div>
+                    <div class="space-y-2 md:col-span-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-slate-400">Message
+                            (Optional)</label>
+                        <textarea
+                            class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                            placeholder="Tell us about your fitness goals..." rows="4"></textarea>
+                    </div>
+                </div>
+                <button
+                    class="w-full bg-primary py-5 rounded-full text-white font-black text-xl tracking-widest hover:brightness-110 transition-all neon-glow-pink">
+                    SEND IT
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Info Cards -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+                class="bg-neutral-dark p-8 rounded-xl border border-white/5 group hover:border-lime-accent/50 transition-all text-center">
+                <div
+                    class="w-16 h-16 bg-lime-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 neon-glow-lime">
+                    <span class="material-icons text-lime-accent">phone_iphone</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Call Us</h3>
+                <p class="text-slate-400">+1 (234) 567-890</p>
+                <p class="text-xs text-lime-accent mt-4 font-bold uppercase tracking-widest">Available 9am - 6pm</p>
+            </div>
+            <div
+                class="bg-neutral-dark p-8 rounded-xl border border-white/5 group hover:border-cyan-accent/50 transition-all text-center">
+                <div
+                    class="w-16 h-16 bg-cyan-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 neon-glow-cyan">
+                    <span class="material-icons text-cyan-accent">alternate_email</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Email Me</h3>
+                <p class="text-slate-400">hello@zumbaflow.com</p>
+                <p class="text-xs text-cyan-accent mt-4 font-bold uppercase tracking-widest">24h Response Time</p>
+            </div>
+            <div
+                class="bg-neutral-dark p-8 rounded-xl border border-white/5 group hover:border-primary/50 transition-all text-center">
+                <div
+                    class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 neon-glow-pink">
+                    <span class="material-icons text-primary">location_on</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Our Studio</h3>
+                <p class="text-slate-400">123 Rhythm Blvd, Miami, FL</p>
+                <p class="text-xs text-primary mt-4 font-bold uppercase tracking-widest">Miami, USA</p>
+            </div>
+        </div>
+    </section>
+    <!-- Social Impact Section -->
+    <section class="bg-neutral-dark py-24 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black uppercase mb-4 tracking-tighter italic">Join the <span
+                        class="text-primary">Community</span></h2>
+                <p class="text-slate-400">Catch the vibe and see what's happening daily on social!</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Instagram -->
+                <div
+                    class="bg-background-dark/50 p-8 rounded-xl border border-white/5 flex flex-col items-center gap-4 group transition-all hover:scale-105">
+                    <div class="text-primary font-black text-4xl mb-2">IG</div>
+                    <div class="text-2xl font-bold">125K+</div>
+                    <div class="text-xs font-bold uppercase text-slate-500 tracking-widest">Followers</div>
+                    <button
+                        class="mt-4 w-full py-2 rounded-full border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">FOLLOW</button>
+                </div>
+                <!-- TikTok -->
+                <div
+                    class="bg-background-dark/50 p-8 rounded-xl border border-white/5 flex flex-col items-center gap-4 group transition-all hover:scale-105">
+                    <div class="text-cyan-accent font-black text-4xl mb-2">TK</div>
+                    <div class="text-2xl font-bold">450K+</div>
+                    <div class="text-xs font-bold uppercase text-slate-500 tracking-widest">Followers</div>
+                    <button
+                        class="mt-4 w-full py-2 rounded-full border border-cyan-accent text-cyan-accent font-bold hover:bg-cyan-accent hover:text-black transition-all">FOLLOW</button>
+                </div>
+                <!-- YouTube -->
+                <div
+                    class="bg-background-dark/50 p-8 rounded-xl border border-white/5 flex flex-col items-center gap-4 group transition-all hover:scale-105">
+                    <div class="text-red-500 font-black text-4xl mb-2">YT</div>
+                    <div class="text-2xl font-bold">85K+</div>
+                    <div class="text-xs font-bold uppercase text-slate-500 tracking-widest">Subscribers</div>
+                    <button
+                        class="mt-4 w-full py-2 rounded-full border border-red-500 text-red-500 font-bold hover:bg-red-500 hover:text-white transition-all">SUBSCRIBE</button>
+                </div>
+                <!-- Facebook -->
+                <div
+                    class="bg-background-dark/50 p-8 rounded-xl border border-white/5 flex flex-col items-center gap-4 group transition-all hover:scale-105">
+                    <div class="text-blue-500 font-black text-4xl mb-2">FB</div>
+                    <div class="text-2xl font-bold">30K+</div>
+                    <div class="text-xs font-bold uppercase text-slate-500 tracking-widest">Members</div>
+                    <button
+                        class="mt-4 w-full py-2 rounded-full border border-blue-500 text-blue-500 font-bold hover:bg-blue-500 hover:text-white transition-all">JOIN
+                        US</button>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[150px] rounded-full -mr-48 -mt-48"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-lime-accent/10 blur-[150px] rounded-full -ml-48 -mb-48"></div>
+    </section>
+    <!-- FAQ Accordion -->
+    <section class="max-w-4xl mx-auto px-6 py-24">
+        <h2 class="text-3xl font-black uppercase mb-12 italic border-l-4 border-cyan-accent pl-6">Frequently Asked <span
+                class="text-cyan-accent">Questions</span></h2>
+        <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="bg-neutral-dark rounded-xl overflow-hidden border border-white/5">
+                <button
+                    class="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors">
+                    <span class="font-bold text-lg">What should I wear to my first class?</span>
+                    <span class="material-icons text-cyan-accent">expand_more</span>
+                </button>
+                <div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+                    Wear comfortable, moisture-wicking athletic gear and supportive cross-training sneakers. Don't
+                    forget a towel and a large water bottle – we're going to sweat!
+                </div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="bg-neutral-dark rounded-xl overflow-hidden border border-white/5">
+                <button
+                    class="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors">
+                    <span class="font-bold text-lg">Do I need dance experience?</span>
+                    <span class="material-icons text-cyan-accent">expand_more</span>
+                </button>
+                <div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+                    Absolutely not! Zumba is for everyone. The steps are repetitive and easy to follow. Just move your
+                    body and have fun – the rhythm will come to you!
+                </div>
+            </div>
+            <!-- FAQ Item 3 -->
+            <div class="bg-neutral-dark rounded-xl overflow-hidden border border-white/5">
+                <button
+                    class="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors">
+                    <span class="font-bold text-lg">How early should I arrive?</span>
+                    <span class="material-icons text-cyan-accent">expand_more</span>
+                </button>
+                <div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+                    Please arrive 10-15 minutes before the class starts so you can check in, meet the instructor, and
+                    find a comfortable spot in the studio.
+                </div>
+            </div>
+            <!-- FAQ Item 4 -->
+            <div class="bg-neutral-dark rounded-xl overflow-hidden border border-white/5">
+                <button
+                    class="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors">
+                    <span class="font-bold text-lg">What is Aqua Rhythm?</span>
+                    <span class="material-icons text-cyan-accent">expand_more</span>
+                </button>
+                <div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+                    It's a low-impact, high-energy pool party! Perfect for those looking for a joint-friendly workout
+                    that still challenges your cardiovascular system.
+                </div>
+            </div>
+            <!-- FAQ Item 5 -->
+            <div class="bg-neutral-dark rounded-xl overflow-hidden border border-white/5">
+                <button
+                    class="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors">
+                    <span class="font-bold text-lg">Can I cancel my booking?</span>
+                    <span class="material-icons text-cyan-accent">expand_more</span>
+                </button>
+                <div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+                    Yes, you can cancel up to 12 hours before the class starts through your member portal or by
+                    contacting us directly.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-neutral-dark border-t border-white/5 pt-20 pb-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <span
+                        class="text-lime-accent font-black text-3xl tracking-tighter italic block mb-6">ZumbaFlow</span>
+                    <p class="text-slate-400 max-w-md mb-8">
+                        The ultimate fitness experience that combines high-energy music with easy-to-follow moves for an
+                        unforgettable calorie-burning dance party.
+                    </p>
+                    <div class="flex gap-6">
+                        <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-all text-white neon-glow-pink"
+                            href="#">
+                            <span class="material-icons text-sm">facebook</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-all text-white neon-glow-pink"
+                            href="#">
+                            <span class="material-icons text-sm">photo_camera</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-all text-white neon-glow-pink"
+                            href="#">
+                            <span class="material-icons text-sm">movie</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-black text-xl uppercase mb-6 italic">Join the Newsletter</h4>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input
+                            class="flex-grow bg-white/5 border border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary"
+                            placeholder="Your email address" type="email" />
+                        <button
+                            class="bg-primary px-8 py-4 rounded-full font-black text-white hover:brightness-110 transition-all neon-glow-pink uppercase tracking-widest">
+                            Subscribe
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-4 italic">Get weekly tips, playlists, and class updates directly
+                        in your inbox.</p>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/5 pt-8 flex flex-col md:row justify-between items-center gap-4 text-slate-500 text-xs font-bold uppercase tracking-widest">
+                <p>© 2024 ZumbaFlow Portfolio. All rights reserved.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

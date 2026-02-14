@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ZumbaFlow | Classes &amp; Schedule</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Bebas+Neue&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff00cc",
+                        "lime-accent": "#CCFF00",
+                        "cyan-accent": "#00FFFF",
+                        "background-light": "#f8f5f8",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "heading": ["Bebas Neue", "cursive"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .bebas {
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 204, 0.4);
+        }
+
+        .neon-glow-lime {
+            box-shadow: 0 0 15px rgba(204, 255, 0, 0.4);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="bebas text-3xl text-lime-accent tracking-wider">ZumbaFlow</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a class="hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="hover:text-primary transition-colors" href="about.html">About</a>
+                <a class="text-primary transition-colors" href="#">Classes</a>
+                <a class="hover:text-primary transition-colors" href="#">Testimonials</a>
+                <a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
+            </div>
+            <button
+                class="bg-primary text-white px-8 py-2.5 rounded-full font-bold uppercase tracking-wide hover:scale-105 transition-transform neon-glow-pink">
+                Book Now
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Zumba Class" class="w-full h-full object-cover opacity-40 mix-blend-overlay"
+                data-alt="High energy motion blurred dance class photo"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHxjKJrGxHQ2UhjpexXVSo1a4BWjUZuuLl94LcK_rMBquZ3aKth1qBjT3MT9TPAcYCgorKeuw5SUtiWbCFbIQM_jFQUudWCyCXzqppKX8BbA-cg4yxppQyOWUT66-r62vV2y5ZFZoiqJMFpMpQVHANnSdcV5wZ0q892OLsr8O5t5TI6OpDy7dA0Q8RrzQq2TuHb0yRod81J_TBnNs3ssXCsfAudq77F2ONGdm5woEfy9mpAkmt5hmjJyaKzLToi7UwI305_X-CeQ" />
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/50 to-background-dark">
+            </div>
+        </div>
+        <div class="relative z-10 text-center px-6">
+            <h1 class="bebas text-8xl md:text-[10rem] leading-none text-white drop-shadow-2xl">
+                FIND YOUR <span class="text-primary">RHYTHM</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-light tracking-widest uppercase mt-4 text-slate-300">
+                Join the ultimate dance-fitness party
+            </p>
+        </div>
+    </header>
+    <!-- Weekly Schedule -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+                <h2 class="bebas text-5xl text-white">Weekly <span class="text-lime-accent">Schedule</span></h2>
+                <p class="text-slate-400 mt-2">Find your favorite class and let the music take control.</p>
+            </div>
+            <div class="flex space-x-4">
+                <span
+                    class="flex items-center text-xs font-semibold px-4 py-1.5 rounded-full bg-primary/20 text-primary border border-primary/30">ZUMBA
+                    POWER</span>
+                <span
+                    class="flex items-center text-xs font-semibold px-4 py-1.5 rounded-full bg-cyan-accent/20 text-cyan-accent border border-cyan-accent/30">AQUA
+                    RHYTHM</span>
+                <span
+                    class="flex items-center text-xs font-semibold px-4 py-1.5 rounded-full bg-lime-accent/20 text-lime-accent border border-lime-accent/30">TONING</span>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
+            <!-- Day Columns -->
+            <!-- Monday -->
+            <div class="space-y-4">
+                <div class="bebas text-2xl text-slate-500 mb-6 text-center">MON</div>
+                <div
+                    class="p-4 glass-card rounded-xl border-l-4 border-primary hover:bg-white/5 transition-colors cursor-pointer group">
+                    <span class="text-xs font-bold text-primary">06:00 PM</span>
+                    <h4 class="font-bold text-lg mt-1 group-hover:text-primary transition-colors">Power Dance</h4>
+                    <p class="text-sm text-slate-400">Studio A • Sarah</p>
+                </div>
+                <div
+                    class="p-4 glass-card rounded-xl border-l-4 border-cyan-accent hover:bg-white/5 transition-colors cursor-pointer group">
+                    <span class="text-xs font-bold text-cyan-accent">08:00 PM</span>
+                    <h4 class="font-bold text-lg mt-1 group-hover:text-cyan-accent transition-colors">Aqua Beats</h4>
+                    <p class="text-sm text-slate-400">Pool 1 • Mike</p>
+                </div>
+            </div>
+            <!-- Tuesday -->
+            <div class="space-y-4">
+                <div class="bebas text-2xl text-slate-500 mb-6 text-center">TUE</div>
+                <div
+                    class="p-4 glass-card rounded-xl border-l-4 border-lime-accent hover:bg-white/5 transition-colors cursor-pointer group">
+                    <span class="text-xs font-bold text-lime-accent">05:30 PM</span>
+                    <h4 class="font-bold text-lg mt-1 group-hover:text-lime-accent transition-colors">Toning Flow</h4>
+                    <p class="text-sm text-slate-400">Studio B • Jess</p>
+                </div>
+            </div>
+            <!-- Wednesday -->
+            <div class="space-y-4">
+                <div class="bebas text-2xl text-slate-500 mb-6 text-center">WED</div>
+                <div
+                    class="p-4 glass-card rounded-xl border-l-4 border-primary hover:bg-white/5 transition-colors cursor-pointer group">
+                    <span class="text-xs font-bold text-primary">06:00 PM</span>
+                    <h4 class="font-bold text-lg mt-1 group-hover:text-primary transition-colors">Power Dance</h4>
+                    <p class="text-sm text-slate-400">Studio A • Sarah</p>
+                </div>
+                <div
+                    class="p-4 glass-card rounded-xl border-l-4 border-primary hover:bg-white/5 transition-colors cursor-pointer group">
+                    <span class="text-xs font-bold text-primary">07:30 PM</span>
+                    <h4 class="font-bold text-lg mt-1 group-hover:text-primary transition-colors">Strong Nation</h4>
+                    <p class="text-sm text-slate-400">Studio A • Alex</p>
+                </div>
+            </div>
+            <!-- Thursday -->
+            <div class="space-y-4">
+                <div class="bebas text-2xl text-slate-500 mb-6 text-center">THU</div>
+                <div
+                    class="p-4 glass-card rounded-xl border-l-4 border-cyan-accent hover:bg-white/5 transition-colors cursor-pointer group">
+                    <span class="text-xs font-bold text-cyan-accent">06:00 PM</span>
+                    <h4 class="font-bold text-lg mt-1 group-hover:text-cyan-accent transition-colors">Aqua Rhythm</h4>
+                    <p class="text-sm text-slate-400">Pool 1 • Mike</p>
+                </div>
+            </div>
+            <!-- Friday -->
+            <div class="space-y-4">
+                <div class="bebas text-2xl text-slate-500 mb-6 text-center">FRI</div>
+                <div
+                    class="p-4 glass-card rounded-xl border-l-4 border-primary hover:bg-white/5 transition-colors cursor-pointer group">
+                    <span class="text-xs font-bold text-primary">05:00 PM</span>
+                    <h4 class="font-bold text-lg mt-1 group-hover:text-primary transition-colors">Flash Friday</h4>
+                    <p class="text-sm text-slate-400">Studio A • Sarah</p>
+                </div>
+            </div>
+            <!-- Saturday -->
+            <div class="space-y-4">
+                <div class="bebas text-2xl text-slate-500 mb-6 text-center">SAT</div>
+                <div
+                    class="p-4 glass-card rounded-xl border-l-4 border-lime-accent hover:bg-white/5 transition-colors cursor-pointer group">
+                    <span class="text-xs font-bold text-lime-accent">10:00 AM</span>
+                    <h4 class="font-bold text-lg mt-1 group-hover:text-lime-accent transition-colors">Morning Tone</h4>
+                    <p class="text-sm text-slate-400">Studio B • Jess</p>
+                </div>
+            </div>
+            <!-- Sunday -->
+            <div class="space-y-4">
+                <div class="bebas text-2xl text-slate-500 mb-6 text-center">SUN</div>
+                <div class="p-4 glass-card rounded-xl border-white/20 opacity-50 border-l-4 italic">
+                    <h4 class="font-bold text-lg text-slate-500">Rest Day</h4>
+                    <p class="text-sm text-slate-500">No scheduled classes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Class Types -->
+    <section class="bg-black/20 py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="bebas text-5xl text-center mb-16 text-white tracking-widest">CHOOSE YOUR <span
+                    class="text-primary">STYLE</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Class Card 1 -->
+                <div class="glass-card p-8 rounded-xl flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div
+                        class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-6 text-primary">
+                        <span class="material-icons">flash_on</span>
+                    </div>
+                    <h3 class="bebas text-3xl mb-4 group-hover:text-primary transition-colors">CLASSIC ZUMBA</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">The original high-energy cardio dance party
+                        that started a revolution.</p>
+                    <div class="mt-auto">
+                        <span
+                            class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">Difficulty</span>
+                        <div class="flex space-x-1">
+                            <span class="material-icons text-primary text-lg">star</span>
+                            <span class="material-icons text-primary text-lg">star</span>
+                            <span class="material-icons text-primary text-lg">star</span>
+                            <span class="material-icons text-slate-700 text-lg">star</span>
+                            <span class="material-icons text-slate-700 text-lg">star</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Class Card 2 -->
+                <div class="glass-card p-8 rounded-xl flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div
+                        class="w-12 h-12 bg-cyan-accent/20 rounded-full flex items-center justify-center mb-6 text-cyan-accent">
+                        <span class="material-icons">waves</span>
+                    </div>
+                    <h3 class="bebas text-3xl mb-4 group-hover:text-cyan-accent transition-colors">AQUA RHYTHM</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Splash your way to fitness with this
+                        low-impact, high-resistance pool workout.</p>
+                    <div class="mt-auto">
+                        <span
+                            class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">Difficulty</span>
+                        <div class="flex space-x-1">
+                            <span class="material-icons text-cyan-accent text-lg">star</span>
+                            <span class="material-icons text-cyan-accent text-lg">star</span>
+                            <span class="material-icons text-slate-700 text-lg">star</span>
+                            <span class="material-icons text-slate-700 text-lg">star</span>
+                            <span class="material-icons text-slate-700 text-lg">star</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Class Card 3 -->
+                <div class="glass-card p-8 rounded-xl flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div
+                        class="w-12 h-12 bg-lime-accent/20 rounded-full flex items-center justify-center mb-6 text-lime-accent">
+                        <span class="material-icons">fitness_center</span>
+                    </div>
+                    <h3 class="bebas text-3xl mb-4 group-hover:text-lime-accent transition-colors">TONING</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Sculpt and define muscles using light weights
+                        to rhythmic beats.</p>
+                    <div class="mt-auto">
+                        <span
+                            class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">Difficulty</span>
+                        <div class="flex space-x-1">
+                            <span class="material-icons text-lime-accent text-lg">star</span>
+                            <span class="material-icons text-lime-accent text-lg">star</span>
+                            <span class="material-icons text-lime-accent text-lg">star</span>
+                            <span class="material-icons text-lime-accent text-lg">star</span>
+                            <span class="material-icons text-slate-700 text-lg">star</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Class Card 4 -->
+                <div class="glass-card p-8 rounded-xl flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-6 text-white">
+                        <span class="material-icons">electric_bolt</span>
+                    </div>
+                    <h3 class="bebas text-3xl mb-4 group-hover:text-white transition-colors">STRONG NATION</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">High-intensity interval training synced
+                        perfectly to original music.</p>
+                    <div class="mt-auto">
+                        <span
+                            class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">Difficulty</span>
+                        <div class="flex space-x-1">
+                            <span class="material-icons text-white text-lg">star</span>
+                            <span class="material-icons text-white text-lg">star</span>
+                            <span class="material-icons text-white text-lg">star</span>
+                            <span class="material-icons text-white text-lg">star</span>
+                            <span class="material-icons text-white text-lg">star</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="text-center mb-16">
+            <h2 class="bebas text-5xl text-white">READY TO <span class="text-primary">START?</span></h2>
+            <p class="text-slate-400 mt-4">Join the tribe today. Flexible plans for every rhythm.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Drop-in -->
+            <div class="glass-card p-10 rounded-xl border border-white/10 flex flex-col items-center text-center">
+                <span class="text-slate-400 font-bold uppercase tracking-widest text-sm">Single Class</span>
+                <h3 class="bebas text-6xl my-6 text-white">$15</h3>
+                <ul class="space-y-4 mb-10 text-slate-300">
+                    <li class="flex items-center"><span
+                            class="material-icons text-primary mr-2 text-sm">check_circle</span> 1 Session Access</li>
+                    <li class="flex items-center"><span
+                            class="material-icons text-primary mr-2 text-sm">check_circle</span> Any Class Type</li>
+                    <li class="flex items-center"><span
+                            class="material-icons text-primary mr-2 text-sm">check_circle</span> Equipment Included</li>
+                </ul>
+                <button
+                    class="w-full py-4 rounded-full border border-white/20 font-bold hover:bg-white/5 transition-colors mt-auto">GET
+                    STARTED</button>
+            </div>
+            <!-- Monthly -->
+            <div
+                class="relative p-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary neon-glow-pink flex flex-col items-center text-center overflow-hidden scale-105 z-10">
+                <div
+                    class="absolute top-6 -right-12 bg-lime-accent text-background-dark font-bold py-1 px-12 rotate-45 text-xs uppercase tracking-tighter">
+                    BEST VALUE</div>
+                <span class="text-white font-bold uppercase tracking-widest text-sm">Monthly Pass</span>
+                <h3 class="bebas text-6xl my-6 text-white">$99</h3>
+                <ul class="space-y-4 mb-10 text-slate-100">
+                    <li class="flex items-center"><span
+                            class="material-icons text-lime-accent mr-2 text-sm">check_circle</span> Unlimited Studio
+                        Access</li>
+                    <li class="flex items-center"><span
+                            class="material-icons text-lime-accent mr-2 text-sm">check_circle</span> Priority Booking
+                    </li>
+                    <li class="flex items-center"><span
+                            class="material-icons text-lime-accent mr-2 text-sm">check_circle</span> Free Guest Pass
+                        (1/mo)</li>
+                </ul>
+                <button
+                    class="w-full py-4 rounded-full bg-primary text-white font-bold hover:scale-105 transition-transform mt-auto">GET
+                    STARTED</button>
+            </div>
+            <!-- Unlimited -->
+            <div class="glass-card p-10 rounded-xl border border-white/10 flex flex-col items-center text-center">
+                <span class="text-slate-400 font-bold uppercase tracking-widest text-sm">Annual Membership</span>
+                <h3 class="bebas text-6xl my-6 text-white">$149</h3>
+                <ul class="space-y-4 mb-10 text-slate-300">
+                    <li class="flex items-center"><span
+                            class="material-icons text-primary mr-2 text-sm">check_circle</span> Everything in Monthly
+                    </li>
+                    <li class="flex items-center"><span
+                            class="material-icons text-primary mr-2 text-sm">check_circle</span> Private Training (1/mo)
+                    </li>
+                    <li class="flex items-center"><span
+                            class="material-icons text-primary mr-2 text-sm">check_circle</span> ZumbaFlow Swag Bag</li>
+                </ul>
+                <button
+                    class="w-full py-4 rounded-full border border-white/20 font-bold hover:bg-white/5 transition-colors mt-auto">GET
+                    STARTED</button>
+            </div>
+        </div>
+    </section>
+    <!-- Location & Map -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <h2 class="bebas text-5xl text-white">OUR <span class="text-lime-accent">LOCATIONS</span></h2>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-lime-accent p-2 rounded-lg text-background-dark">
+                            <span class="material-icons">location_on</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl">DOWNTOWN STUDIO (Main)</h4>
+                            <p class="text-slate-400">123 Rhythm Boulevard, Dance City, DC 54321</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-lime-accent p-2 rounded-lg text-background-dark">
+                            <span class="material-icons">location_on</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl">THE LAGOON (Aqua Classes)</h4>
+                            <p class="text-slate-400">456 Splash Way, Aquatic Center, DC 54322</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-8">
+                    <button class="flex items-center space-x-2 text-lime-accent font-bold hover:underline">
+                        <span>VIEW ALL BRANCHES</span>
+                        <span class="material-icons">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+            <div class="relative h-[400px] rounded-xl overflow-hidden glass-card border-2 border-white/5 shadow-2xl">
+                <div class="absolute inset-0 bg-slate-800 flex items-center justify-center"
+                    data-location="Dance City, Downtown" style="">
+                    <img alt="Map Placeholder" class="w-full h-full object-cover opacity-50 grayscale contrast-125"
+                        data-alt="Stylized dark map with electric lime pin drops"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7Sdi1GqMg8zvm44PoGzAC6Flv5bEJNU-nETlk9-CD3aEqH8f9Eu4KnsAPQkF_jxaL1dI2zxQgzrXp69avKxVtRNbr0oBYTm_tIPgxM9PLSazvnMJ8pOssYFYIs9FwdZFDf6aAqaz6eGgxzJ4N_akpsgx1ygnwBS5HXD6Atcpwe4dXfgKWod_-SYB9ZYpC652vIV4M27PE0cCEipOCyLG6xlEAkJ77CGsAvfrSdy0WtE6rW5Vmk5YtRIy-BOtCJPJwMhL0Kbt9lg" />
+                    <div class="absolute top-1/2 left-1/3 animate-bounce">
+                        <span
+                            class="material-icons text-lime-accent text-5xl drop-shadow-[0_0_10px_rgba(204,255,0,0.8)]">location_on</span>
+                    </div>
+                    <div class="absolute top-1/3 right-1/4 animate-bounce delay-700">
+                        <span
+                            class="material-icons text-lime-accent text-5xl drop-shadow-[0_0_10px_rgba(204,255,0,0.8)]">location_on</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-black/40 border-t border-white/5 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <span class="bebas text-4xl text-lime-accent tracking-wider">ZumbaFlow</span>
+                    <p class="text-slate-400 leading-relaxed">Dance, sweat, and feel alive. Join the most vibrant
+                        fitness community in the city.</p>
+                    <div class="flex space-x-4">
+                        <a class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all neon-glow-pink"
+                            href="#">
+                            <img alt="Instagram" class="w-5 h-5 invert"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8qWKNX6PdmkS4xogw0GSJcKuS9FWMRpMA-5rEVjT3pnDOJG_XnHstQwcKFszKWYY3lGC9sSvHOuvtUignRh3Jho0ryA-jujYIUMY0ZN8TmBer796HYuaPYi1znxVnp9z7W9NwCQRGKpu1kyWzln4THc9m1Nqa6lXgyuzm1BEaHoK7zn7KJNHqpZdGYNwd1dibV_MoKWzDm8x0qAFNetBNXoFfUb0qWz1GL-anNhayBNDi9YqbJCO-mIaMw3Jb3mQPtqHgUyIgwA" />
+                        </a>
+                        <a class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all neon-glow-pink"
+                            href="#">
+                            <img alt="TikTok" class="w-5 h-5 invert"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOorz_L2sTjLh2kdmdL0sEywdcuuMymJRADVfoQhARp4POQPpyx6tVsiF81Mkbd98g49x5kQEk8KqlA_oQlJ4eon60QDECpqUJoGOZKkzH_ob5cmAQdatqhwsasBp5prXTlk8qiaPFV1tdnlk1MKF2kAxpxYxEOmF8Tf55t6EKXu5FyC41ygg7oRVwwCEipWgxdggIAGF7tocjWOBCpLJWWuqAKp2JFK7FB7uPbrmJU3o75gH9jsycIwNQahUXDPxCBdNdsgXv-Q" />
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white mb-6 uppercase tracking-widest text-sm">Quick Links</h5>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Class Styles</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Meet Trainers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Safety FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white mb-6 uppercase tracking-widest text-sm">Support</h5>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="#">My Account</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Cancelation Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white mb-6 uppercase tracking-widest text-sm">Stay Updated</h5>
+                    <p class="text-slate-400 mb-6 text-sm">Subscribe for new class drops and events.</p>
+                    <form class="flex flex-col space-y-3">
+                        <input
+                            class="bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-primary transition-colors text-sm"
+                            placeholder="Email Address" type="email" />
+                        <button
+                            class="bg-primary text-white font-bold py-3 rounded-full hover:scale-105 transition-transform uppercase tracking-widest text-xs neon-glow-pink">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center pt-8 border-t border-white/5 text-slate-600 text-xs tracking-widest">
+                © 2024 ZUMBAFLOW FITNESS PORTFOLIO. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

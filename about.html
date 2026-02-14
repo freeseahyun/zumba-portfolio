@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>ZumbaFlow | About Me</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ff00cc",
+            "lime": "#CCFF00",
+            "cyan": "#00FFFF",
+            "background-light": "#f8f5f8",
+            "background-dark": "#1A1A1A",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .neon-glow-pink {
+      box-shadow: 0 0 20px rgba(255, 0, 204, 0.4)
+    }
+
+    .neon-glow-lime {
+      box-shadow: 0 0 20px rgba(204, 255, 0, 0.4)
+    }
+
+    .text-shadow-neon {
+      text-shadow: 0 0 10px rgba(255, 0, 204, 0.8)
+    }
+
+    .grain-overlay {
+      background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuB_fbKJdMcSzDnPOsHxEMa7EZ4L2GDoF7haJI6rsE8XpWYC2aO7xAIaPtf4E_s8sQEASYB7LQJD2yyro-AYeDRsDuBGMWnYdZghPQKgLMNMYIibE4rJpb_n5RlhjFdWk1f1J59ksyh3XbPdzzYgTmqVT9USUeJT9cpD4UtbVK7p5dgU48fMtCYNEz5AVyceD3HfiWsc-k0V7xv_7FCKj8eHWRCv8IhXuZZIoGsnGYr529FUNcteU-MHt_Fj6wYGCgYqLjOuhBWKdg)
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark font-display text-white selection:bg-primary selection:text-white">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-background-dark/80 backdrop-blur-xl border-b border-primary/10">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-lime text-2xl font-extrabold tracking-tighter uppercase">ZumbaFlow</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-widest text-white/70">
+        <a class="hover:text-primary transition-colors" href="index.html">Home</a>
+        <a class="text-primary" href="#">About</a>
+        <a class="hover:text-primary transition-colors" href="classes.html">Classes</a>
+        <a class="hover:text-primary transition-colors" href="#">Testimonials</a>
+        <a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
+      </div>
+      <button
+        class="bg-primary text-white px-8 py-3 rounded-full font-bold uppercase text-xs tracking-widest hover:scale-105 transition-transform neon-glow-pink">
+        Book Now
+      </button>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] w-full flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img alt="Dance Studio Background" class="w-full h-full object-cover opacity-40"
+        data-alt="Gritty textured dance studio with colorful lights"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDweWBHd2vIX8zkEXmWUj7EzOs3Oa_An07proaTAGVsFcCkxIXPjvxTD0PaQNQL2aifxFhBXGPEMjhZIsjrcNHGyWAnCQ3U1RFEzEg56Mlk6bmpPCyCYAjNNpX-Cca60K-E_rVjwZl5qhcJ5W9Kv3KGYaU4l0t1-dQAX70Jiz1fDjhSiCsKDkgrfnHZUji2QTzXlbvdb7zAetE1XB8qDUQ3UO_cj4cYkoIGT4d_jAxU3368VvDftSEBQJBNwjWQIuccS8QJftHIcQ" />
+      <div class="absolute inset-0 bg-gradient-to-b from-background-dark/60 via-background-dark/80 to-background-dark">
+      </div>
+    </div>
+    <div class="relative z-10 text-center px-4">
+      <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter text-white uppercase leading-none">
+        My Story,<br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-lime">My Rhythm</span>
+      </h1>
+      <p class="mt-6 text-xl text-white/60 max-w-2xl mx-auto font-light tracking-wide uppercase">
+        Discover the heartbeat behind the movements and the energy that drives the flow.
+      </p>
+    </div>
+  </section>
+  <!-- Bio Section -->
+  <section class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="relative group">
+        <div class="absolute -inset-4 bg-primary/20 rounded-xl blur-2xl group-hover:bg-primary/30 transition-all"></div>
+        <div class="relative overflow-hidden rounded-xl border border-white/10">
+          <img alt="Instructor Portrait"
+            class="w-full h-auto object-cover aspect-[4/5] hover:scale-105 transition-transform duration-700"
+            data-alt="Energetic female instructor dancing in studio"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwvWRHZ5qvDjtp16WqtmvHiUP4MW0Br3hYo_-ez-mYK31EcymEdluA_BSB120apWLrWlMt4X9nLc0Xpw1FNFWe3qssyFIztZx6y7Ob9FguepROGMJJNpn1hluSu20SCwnozFQPeQ4DIYzpuDGUFltqo7UYdaleqUDIbLoMEeuDejiokqht2Fv9Fi6h2COWrc4WnXQ8IiM9C3g8vP8_Ry56vcpUhRCeSd0eQikfD7u1p9W15j4FfSLEus5BifFVvpWfbesV62H5fw" />
+        </div>
+      </div>
+      <div class="space-y-8">
+        <div>
+          <h2 class="text-lime text-sm font-bold uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
+            <span class="w-12 h-[2px] bg-lime"></span> The Journey
+          </h2>
+          <h3 class="text-4xl md:text-5xl font-extrabold leading-tight">Born to Dance, Driven to Inspire.</h3>
+        </div>
+        <div class="space-y-6 text-lg text-white/70 leading-relaxed font-light">
+          <p>
+            It started with a single beat in a crowded studio ten years ago. What began as a curiosity quickly
+            transformed into a lifelong passion for rhythm, community, and the sheer joy of movement.
+          </p>
+          <p>
+            As a Master Trainer, my mission is to break the barriers of conventional fitness. We don't just "work out" –
+            we celebrate. Every drop of sweat is a testament to your strength, and every rhythm is a step toward a
+            better you.
+          </p>
+        </div>
+        <!-- Stats Bar -->
+        <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/10">
+          <div
+            class="text-center p-6 bg-white/5 rounded-xl border border-white/10 hover:border-cyan/50 transition-colors">
+            <div class="text-3xl font-black text-cyan">8+</div>
+            <div class="text-[10px] uppercase tracking-widest text-white/40 mt-1">Years Exp</div>
+          </div>
+          <div
+            class="text-center p-6 bg-white/5 rounded-xl border border-white/10 hover:border-cyan/50 transition-colors">
+            <div class="text-3xl font-black text-cyan">12+</div>
+            <div class="text-[10px] uppercase tracking-widest text-white/40 mt-1">Certs</div>
+          </div>
+          <div
+            class="text-center p-6 bg-white/5 rounded-xl border border-white/10 hover:border-cyan/50 transition-colors">
+            <div class="text-3xl font-black text-cyan">5+</div>
+            <div class="text-[10px] uppercase tracking-widest text-white/40 mt-1">Countries</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Certifications Section -->
+  <section class="py-24 bg-white/[0.02]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter">Elite <span
+            class="text-primary">Credentials</span></h2>
+        <p class="text-white/40 mt-4 uppercase tracking-widest text-sm font-semibold">Certified in the gold standard of
+          dance fitness</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- ZIN Card -->
+        <div
+          class="group p-8 bg-background-dark border border-white/10 rounded-xl hover:border-primary/50 transition-all duration-300 relative overflow-hidden text-center">
+          <div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="relative z-10">
+            <div
+              class="w-24 h-24 mx-auto mb-6 bg-primary/20 rounded-full flex items-center justify-center neon-glow-pink">
+              <span class="material-icons text-primary text-4xl">verified_user</span>
+            </div>
+            <h4 class="text-2xl font-black mb-2 uppercase italic">ZIN™ Member</h4>
+            <p class="text-white/50 text-sm leading-relaxed">Certified Zumba® Instructor Network member providing the
+              latest choreography and music direct from HQ.</p>
+          </div>
+        </div>
+        <!-- Strong Nation Card -->
+        <div
+          class="group p-8 bg-background-dark border border-white/10 rounded-xl hover:border-lime/50 transition-all duration-300 relative overflow-hidden text-center">
+          <div class="absolute inset-0 bg-lime/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="relative z-10">
+            <div class="w-24 h-24 mx-auto mb-6 bg-lime/20 rounded-full flex items-center justify-center neon-glow-lime">
+              <span class="material-icons text-lime text-4xl">fitness_center</span>
+            </div>
+            <h4 class="text-2xl font-black mb-2 uppercase italic">Strong Nation™</h4>
+            <p class="text-white/50 text-sm leading-relaxed">High Intensity Tempo Training (HITT) specialist, synced to
+              the beat for peak performance results.</p>
+          </div>
+        </div>
+        <!-- Aqua Zumba Card -->
+        <div
+          class="group p-8 bg-background-dark border border-white/10 rounded-xl hover:border-cyan/50 transition-all duration-300 relative overflow-hidden text-center">
+          <div class="absolute inset-0 bg-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="relative z-10">
+            <div class="w-24 h-24 mx-auto mb-6 bg-cyan/20 rounded-full flex items-center justify-center"
+              style="box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);">
+              <span class="material-icons text-cyan text-4xl">pool</span>
+            </div>
+            <h4 class="text-2xl font-black mb-2 uppercase italic">Aqua Zumba®</h4>
+            <p class="text-white/50 text-sm leading-relaxed">Low-impact, high-energy aquatic specialist perfect for
+              joint-friendly cardio sessions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Philosophy Quote Section -->
+  <section class="py-32 relative overflow-hidden flex items-center justify-center">
+    <div class="absolute inset-0 opacity-10 flex items-center justify-center">
+      <span class="text-[30vw] font-black italic tracking-tighter uppercase select-none">RHYTHM</span>
+    </div>
+    <div class="relative z-10 text-center px-6 max-w-4xl">
+      <span class="material-icons text-primary text-6xl mb-8 opacity-50">format_quote</span>
+      <blockquote class="text-4xl md:text-6xl font-black italic leading-[1.1] tracking-tight uppercase">
+        Movement is my <span class="text-primary text-shadow-neon">medicine</span>,<br />
+        rhythm is my <span class="text-lime">soul</span>.
+      </blockquote>
+      <div class="mt-12 flex items-center justify-center gap-4">
+        <span class="w-16 h-[2px] bg-white/20"></span>
+        <span class="uppercase tracking-[0.5em] text-white/50 text-xs font-bold">ZumbaFlow Philosophy</span>
+        <span class="w-16 h-[2px] bg-white/20"></span>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-black border-t border-primary/20 pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 mb-20 items-center">
+        <div>
+          <h4 class="text-3xl font-black uppercase mb-4 tracking-tight italic">Join the <span
+              class="text-primary">Vibe</span></h4>
+          <p class="text-white/50 max-w-md">Subscribe for weekly playlists, class schedules, and exclusive fitness tips
+            delivered to your inbox.</p>
+        </div>
+        <form class="relative max-w-md lg:ml-auto w-full">
+          <input
+            class="w-full bg-white/5 border border-white/10 rounded-full px-8 py-5 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-white/20 font-semibold"
+            placeholder="Your Email Address" type="email" />
+          <button
+            class="absolute right-2 top-2 bottom-2 bg-primary px-8 rounded-full font-bold uppercase text-xs tracking-widest hover:scale-95 transition-transform"
+            type="submit">
+            Join
+          </button>
+        </form>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-white/5">
+        <div class="text-lime font-black text-2xl uppercase italic tracking-tighter">ZumbaFlow</div>
+        <div class="flex gap-4">
+          <a class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group hover:border-primary/50 transition-all"
+            href="#">
+            <img alt="Instagram" class="group-hover:scale-110 transition-transform" data-alt="Instagram logo icon"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbVNrEMLJeLjsyleTNePCp18Slz7iBF0b3A0zbEvxPLJ1h4r4_bnahuz0-1jwW0HA59RYZRE2bc7O_5-XqmkeJUq8aopRsvrLhFb3O1MZyvMzbVhb1A-XRJQlCX8mrWrBn43l7rUMmrwzaGKovoZK-6nXOVqB6Zznrg_iYNrsFlAOdSLshRupXqBSPuP7queqN2Yz1uk5vj56lUhXPU1Pb7cdv5fPaC9X_LnvmVXXBG91vofqREqgVkDdI5Wle_-454Uvoyr0P4g" />
+          </a>
+          <a class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group hover:border-primary/50 transition-all"
+            href="#">
+            <img alt="TikTok" class="group-hover:scale-110 transition-transform" data-alt="TikTok logo icon"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl_tSAckRoC6S9kzwIxXWT9HH6b6EyUD3SziYogb0qX1-RW5LzKdfKI3zEIHQ67MqGdrTx-dMr-fSjPFC7BDQT8j_Cd90mraPr5Rjg7vXUuYPySX9L-Zrbmg4ouDSofhonzYno-Zhf9DRJ4LNBtOGAiKDHOImY-MmRBJw6jrpc08aLkTywWk__YEQy8pu5gEYe45i6gdWBUQUu0dGKindYL87CPfH_VnQ6Uh4llb7NZtQDNNFf9iEkDKHY74XCuuJswcBcIXW9DQ" />
+          </a>
+          <a class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group hover:border-primary/50 transition-all"
+            href="#">
+            <img alt="Facebook" class="group-hover:scale-110 transition-transform" data-alt="Facebook logo icon"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQtjOr21_5epZLVoy3my8EyBzv83alskSlmiTI0iP2eaDAvlYxdEgGIJgIsllUzpIlPNykL_tvNvZReZEpWktTnbezJ28-yXtGLXERIj8cYtjiandAMNvK6eZBtHkA0THyT_Yq5_hgyAfG4Jhy1ginVb9Sb8nXSGOm-d9Q_MTU_8FfG1bHZ7zdJum0U1kYfpmfSKGdRukyqIokDfM8XNszHEibREMBKm9102q98UY94Yxw7uf3oioeYy3KTv4TSnGl9FG-gyBPow" />
+          </a>
+        </div>
+        <div class="text-white/30 text-xs font-semibold uppercase tracking-widest">
+          © 2024 ZumbaFlow. All Beats Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
