@@ -19,11 +19,6 @@ const DEFAULT_CLASSES = [
     { id: 7, name: 'Flash Friday', day: 'FRI', time: '17:00', instructor: 'Sarah', location: 'Studio A', type: 'ZUMBA', color: 'primary' },
     { id: 8, name: 'Morning Tone', day: 'SAT', time: '10:00', instructor: 'Jess', location: 'Studio B', type: 'TONING', color: 'lime-accent' },
 ];
-const DEFAULT_LOCATIONS = [
-    { id: 1, name: 'Studio A', address: '서울시 강남구 리듬로 123', capacity: 30, desc: '메인 댄스 스튜디오' },
-    { id: 2, name: 'Studio B', address: '서울시 강남구 리듬로 123 B동', capacity: 20, desc: '토닝 전용 스튜디오' },
-    { id: 3, name: 'Pool 1', address: '서울시 강남구 스플래시 웨이 456', capacity: 15, desc: '아쿠아 수업 전용 풀' },
-];
 const DEFAULT_SETTINGS = { siteName: 'ZumbaFlow', phone: '02-1234-5678', email: 'info@zumbaflow.com', insta: '@zumbaflow' };
 
 function loadData(key, fallback) {
