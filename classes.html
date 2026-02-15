@@ -122,88 +122,8 @@
                     class="flex items-center text-xs font-semibold px-4 py-1.5 rounded-full bg-lime-accent/20 text-lime-accent border border-lime-accent/30">TONING</span>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
-            <!-- Day Columns -->
-            <!-- Monday -->
-            <div class="space-y-4">
-                <div class="bebas text-2xl text-slate-500 mb-6 text-center">MON</div>
-                <div
-                    class="p-4 glass-card rounded-xl border-l-4 border-primary hover:bg-white/5 transition-colors cursor-pointer group">
-                    <span class="text-xs font-bold text-primary">06:00 PM</span>
-                    <h4 class="font-bold text-lg mt-1 group-hover:text-primary transition-colors">Power Dance</h4>
-                    <p class="text-sm text-slate-400">Studio A • Sarah</p>
-                </div>
-                <div
-                    class="p-4 glass-card rounded-xl border-l-4 border-cyan-accent hover:bg-white/5 transition-colors cursor-pointer group">
-                    <span class="text-xs font-bold text-cyan-accent">08:00 PM</span>
-                    <h4 class="font-bold text-lg mt-1 group-hover:text-cyan-accent transition-colors">Aqua Beats</h4>
-                    <p class="text-sm text-slate-400">Pool 1 • Mike</p>
-                </div>
-            </div>
-            <!-- Tuesday -->
-            <div class="space-y-4">
-                <div class="bebas text-2xl text-slate-500 mb-6 text-center">TUE</div>
-                <div
-                    class="p-4 glass-card rounded-xl border-l-4 border-lime-accent hover:bg-white/5 transition-colors cursor-pointer group">
-                    <span class="text-xs font-bold text-lime-accent">05:30 PM</span>
-                    <h4 class="font-bold text-lg mt-1 group-hover:text-lime-accent transition-colors">Toning Flow</h4>
-                    <p class="text-sm text-slate-400">Studio B • Jess</p>
-                </div>
-            </div>
-            <!-- Wednesday -->
-            <div class="space-y-4">
-                <div class="bebas text-2xl text-slate-500 mb-6 text-center">WED</div>
-                <div
-                    class="p-4 glass-card rounded-xl border-l-4 border-primary hover:bg-white/5 transition-colors cursor-pointer group">
-                    <span class="text-xs font-bold text-primary">06:00 PM</span>
-                    <h4 class="font-bold text-lg mt-1 group-hover:text-primary transition-colors">Power Dance</h4>
-                    <p class="text-sm text-slate-400">Studio A • Sarah</p>
-                </div>
-                <div
-                    class="p-4 glass-card rounded-xl border-l-4 border-primary hover:bg-white/5 transition-colors cursor-pointer group">
-                    <span class="text-xs font-bold text-primary">07:30 PM</span>
-                    <h4 class="font-bold text-lg mt-1 group-hover:text-primary transition-colors">Strong Nation</h4>
-                    <p class="text-sm text-slate-400">Studio A • Alex</p>
-                </div>
-            </div>
-            <!-- Thursday -->
-            <div class="space-y-4">
-                <div class="bebas text-2xl text-slate-500 mb-6 text-center">THU</div>
-                <div
-                    class="p-4 glass-card rounded-xl border-l-4 border-cyan-accent hover:bg-white/5 transition-colors cursor-pointer group">
-                    <span class="text-xs font-bold text-cyan-accent">06:00 PM</span>
-                    <h4 class="font-bold text-lg mt-1 group-hover:text-cyan-accent transition-colors">Aqua Rhythm</h4>
-                    <p class="text-sm text-slate-400">Pool 1 • Mike</p>
-                </div>
-            </div>
-            <!-- Friday -->
-            <div class="space-y-4">
-                <div class="bebas text-2xl text-slate-500 mb-6 text-center">FRI</div>
-                <div
-                    class="p-4 glass-card rounded-xl border-l-4 border-primary hover:bg-white/5 transition-colors cursor-pointer group">
-                    <span class="text-xs font-bold text-primary">05:00 PM</span>
-                    <h4 class="font-bold text-lg mt-1 group-hover:text-primary transition-colors">Flash Friday</h4>
-                    <p class="text-sm text-slate-400">Studio A • Sarah</p>
-                </div>
-            </div>
-            <!-- Saturday -->
-            <div class="space-y-4">
-                <div class="bebas text-2xl text-slate-500 mb-6 text-center">SAT</div>
-                <div
-                    class="p-4 glass-card rounded-xl border-l-4 border-lime-accent hover:bg-white/5 transition-colors cursor-pointer group">
-                    <span class="text-xs font-bold text-lime-accent">10:00 AM</span>
-                    <h4 class="font-bold text-lg mt-1 group-hover:text-lime-accent transition-colors">Morning Tone</h4>
-                    <p class="text-sm text-slate-400">Studio B • Jess</p>
-                </div>
-            </div>
-            <!-- Sunday -->
-            <div class="space-y-4">
-                <div class="bebas text-2xl text-slate-500 mb-6 text-center">SUN</div>
-                <div class="p-4 glass-card rounded-xl border-white/20 opacity-50 border-l-4 italic">
-                    <h4 class="font-bold text-lg text-slate-500">Rest Day</h4>
-                    <p class="text-sm text-slate-500">No scheduled classes</p>
-                </div>
-            </div>
+        <div id="weeklySchedule" class="grid grid-cols-1 md:grid-cols-7 gap-4">
+            <!-- Data loaded by data-loader.js -->
         </div>
     </section>
     <!-- Class Types -->
@@ -323,7 +243,7 @@
                     class="absolute top-6 -right-12 bg-lime-accent text-background-dark font-bold py-1 px-12 rotate-45 text-xs uppercase tracking-tighter">
                     최고 가치</div>
                 <span class="text-white font-bold uppercase tracking-widest text-sm">월간 패스</span>
-                <h3 class="bebas text-6xl my-6 text-white">₩99,000</h3>
+                <h3 class="bebas text-6xl my-6 text-white">₩40,000</h3>
                 <ul class="space-y-4 mb-10 text-slate-100">
                     <li class="flex items-center"><span
                             class="material-icons text-lime-accent mr-2 text-sm">check_circle</span> 스튜디오 무제한 이용</li>
@@ -340,7 +260,7 @@
             <!-- Unlimited -->
             <div class="glass-card p-10 rounded-xl border border-white/10 flex flex-col items-center text-center">
                 <span class="text-slate-400 font-bold uppercase tracking-widest text-sm">연간 회원</span>
-                <h3 class="bebas text-6xl my-6 text-white">₩149,000</h3>
+                <h3 class="bebas text-6xl my-6 text-white">₩000,000</h3>
                 <ul class="space-y-4 mb-10 text-slate-300">
                     <li class="flex items-center"><span
                             class="material-icons text-primary mr-2 text-sm">check_circle</span> 월간 패스 전체 포함
@@ -464,6 +384,7 @@
             </div>
         </div>
     </footer>
+    <script src="data-loader.js"></script>
 </body>
 
 </html>
