@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ZumbaFlow | Toning</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Bebas+Neue&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff00cc",
+                        "lime-accent": "#CCFF00",
+                        "cyan-accent": "#00FFFF",
+                        "background-light": "#f8f5f8",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "heading": ["Bebas Neue", "cursive"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .bebas {
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 204, 0.4);
+        }
+
+        .neon-glow-lime {
+            box-shadow: 0 0 15px rgba(204, 255, 0, 0.4);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        .pulse-bg {
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-slate-100 antialiased overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="bebas text-3xl text-lime-accent tracking-wider">ZumbaFlow</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a class="hover:text-primary transition-colors" href="index.html">홈</a>
+                <a class="hover:text-primary transition-colors" href="about.html">소개</a>
+                <a class="text-primary transition-colors" href="classes.html">수업</a>
+                <a class="hover:text-primary transition-colors" href="gallery.html">갤러리</a>
+                <a class="hover:text-primary transition-colors" href="contact.html">문의</a>
+            </div>
+            <button
+                class="bg-primary text-white px-8 py-2.5 rounded-full font-bold uppercase tracking-wide hover:scale-105 transition-transform neon-glow-pink">
+                지금 예약
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-lime-accent/25 rounded-full blur-[120px] pulse-bg"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-lime-accent/15 rounded-full blur-[100px] pulse-bg"
+                style="animation-delay: 2s;"></div>
+        </div>
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <a href="classes.html"
+                class="inline-flex items-center text-sm text-slate-400 hover:text-lime-accent transition-colors mb-8 group">
+                <span class="material-icons mr-1 group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                수업 목록으로 돌아가기
+            </a>
+            <div
+                class="w-20 h-20 bg-lime-accent/20 rounded-full flex items-center justify-center mx-auto mb-8 neon-glow-lime">
+                <span class="material-icons text-lime-accent text-4xl">fitness_center</span>
+            </div>
+            <h1 class="bebas text-7xl md:text-9xl leading-none text-white mb-4">ZUMBA <span
+                    class="text-lime-accent">TONING</span></h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                가벼운 웨이트와 리듬이 만나면? 춤추면서 근육을 조각하는 토닝 줌바!
+            </p>
+        </div>
+    </section>
+
+    <!-- 수업 개요 -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div class="glass-card p-8 rounded-xl text-center">
+                <span class="material-icons text-lime-accent text-3xl mb-4">timer</span>
+                <h4 class="bebas text-2xl mb-2">55분</h4>
+                <p class="text-slate-400 text-sm">수업 시간</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-center">
+                <span class="material-icons text-primary text-3xl mb-4">local_fire_department</span>
+                <h4 class="bebas text-2xl mb-2">500~700 kcal</h4>
+                <p class="text-slate-400 text-sm">평균 소모 칼로리</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-center">
+                <span class="material-icons text-cyan-accent text-3xl mb-4">sports_handball</span>
+                <h4 class="bebas text-2xl mb-2">토닝 스틱</h4>
+                <p class="text-slate-400 text-sm">가벼운 웨이트 사용</p>
+            </div>
+        </div>
+
+        <!-- 상세 설명 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="bebas text-5xl mb-6">수업 <span class="text-lime-accent">소개</span></h2>
+                <p class="text-slate-300 leading-relaxed mb-6">
+                    Zumba Toning은 기존 줌바의 신나는 리듬에 가벼운 토닝 스틱(마라카스 형태의 웨이트)을 결합한 특별한 프로그램입니다.
+                    춤을 추면서 동시에 팔, 복부, 허벅지, 엉덩이 등 핵심 근육을 집중적으로 단련합니다.
+                </p>
+                <p class="text-slate-300 leading-relaxed mb-8">
+                    토닝 스틱의 리드미컬한 소리가 음악과 어우러져 더욱 즐거운 운동 경험을 선사합니다.
+                    유산소와 근력 운동을 동시에 할 수 있어, 시간 대비 효율이 매우 뛰어납니다.
+                    탄탄한 바디 라인을 만들고 싶은 분들에게 최적의 수업입니다.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="px-4 py-2 rounded-full bg-lime-accent/10 border border-lime-accent/30 text-lime-accent text-sm font-semibold">근력
+                        강화</span>
+                    <span
+                        class="px-4 py-2 rounded-full bg-lime-accent/10 border border-lime-accent/30 text-lime-accent text-sm font-semibold">바디
+                        스컬프팅</span>
+                    <span
+                        class="px-4 py-2 rounded-full bg-lime-accent/10 border border-lime-accent/30 text-lime-accent text-sm font-semibold">코어
+                        운동</span>
+                    <span
+                        class="px-4 py-2 rounded-full bg-lime-accent/10 border border-lime-accent/30 text-lime-accent text-sm font-semibold">유산소+근력</span>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-8 -right-8 w-64 h-64 bg-lime-accent/15 rounded-full blur-3xl"></div>
+                <img class="relative z-10 w-full rounded-xl object-cover aspect-[4/3] border border-white/10"
+                    alt="Toning 수업 장면"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG9x3XFFX6uk7EUlSkE1ytvq-mhMteAD4XGgEoo288gT7RLHxNVscZywC8jTGdGazOPDHw_MUXjE6ag177tdVquGYFjKN_t-ZU62DeyN8JUr8nL8JGKeuGc9I4XJNN9VEoxbywcV5KnCJX_KcLqRMTMngTJ1Hsd8z3S2kKO1zlALbE2emKHah9BWs52wEmqkxxEOqeOthbAyqVOVTcyO_7UuH5p26_iE5-ZjtdQ90BL-e4Sq3qKdpN6nM2vvqLQcrOZNmOs2huRQ" />
+            </div>
+        </div>
+    </section>
+
+    <!-- 이런 분께 추천 -->
+    <section class="bg-black/20 py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="bebas text-5xl text-center mb-16">이런 분께 <span class="text-lime-accent">추천</span>합니다</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card p-8 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                    <span class="material-icons text-lime-accent text-4xl mb-4">straighten</span>
+                    <h4 class="font-bold text-lg mb-2">바디 라인</h4>
+                    <p class="text-slate-400 text-sm">탄탄하고 날씬한 바디 라인을 만들고 싶은 분</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                    <span class="material-icons text-primary text-4xl mb-4">schedule</span>
+                    <h4 class="font-bold text-lg mb-2">시간 효율</h4>
+                    <p class="text-slate-400 text-sm">한 시간에 유산소와 근력 운동을 동시에 하고 싶은 분</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                    <span class="material-icons text-cyan-accent text-4xl mb-4">trending_up</span>
+                    <h4 class="font-bold text-lg mb-2">레벨업</h4>
+                    <p class="text-slate-400 text-sm">기본 줌바에서 한 단계 더 강도를 높이고 싶은 분</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                    <span class="material-icons text-white text-4xl mb-4">music_note</span>
+                    <h4 class="font-bold text-lg mb-2">리듬 운동</h4>
+                    <p class="text-slate-400 text-sm">토닝 스틱의 마라카스 사운드와 함께 즐기고 싶은 분</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 스케줄 & CTA -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="glass-card p-12 rounded-xl border border-lime-accent/20 text-center">
+            <h2 class="bebas text-5xl mb-4">지금 바로 <span class="text-lime-accent">시작</span>하세요</h2>
+            <p class="text-slate-400 mb-4">매주 화 오후 5:30 · 토 오전 10:00 | Studio B</p>
+            <p class="text-slate-400 mb-8">강사: Jess</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="contact.html"
+                    class="bg-lime-accent text-background-dark px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform neon-glow-lime">
+                    수업 예약하기
+                </a>
+                <a href="classes.html"
+                    class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-white/20 transition-all">
+                    다른 수업 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/40 border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-600 text-xs tracking-widest">
+            © 2024 ZUMBAFLOW FITNESS PORTFOLIO. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+</body>
+
+</html>

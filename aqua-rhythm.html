@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ZumbaFlow | Aqua Rhythm</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Bebas+Neue&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff00cc",
+                        "lime-accent": "#CCFF00",
+                        "cyan-accent": "#00FFFF",
+                        "background-light": "#f8f5f8",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "heading": ["Bebas Neue", "cursive"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .bebas {
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 204, 0.4);
+        }
+
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        .pulse-bg {
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+
+        /* 물결 애니메이션 */
+        @keyframes wave {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .wave-anim {
+            animation: wave 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-slate-100 antialiased overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="bebas text-3xl text-lime-accent tracking-wider">ZumbaFlow</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a class="hover:text-primary transition-colors" href="index.html">홈</a>
+                <a class="hover:text-primary transition-colors" href="about.html">소개</a>
+                <a class="text-primary transition-colors" href="classes.html">수업</a>
+                <a class="hover:text-primary transition-colors" href="gallery.html">갤러리</a>
+                <a class="hover:text-primary transition-colors" href="contact.html">문의</a>
+            </div>
+            <button
+                class="bg-primary text-white px-8 py-2.5 rounded-full font-bold uppercase tracking-wide hover:scale-105 transition-transform neon-glow-pink">
+                지금 예약
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-accent/25 rounded-full blur-[120px] pulse-bg"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-accent/15 rounded-full blur-[100px] pulse-bg"
+                style="animation-delay: 2s;"></div>
+        </div>
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <a href="classes.html"
+                class="inline-flex items-center text-sm text-slate-400 hover:text-cyan-accent transition-colors mb-8 group">
+                <span class="material-icons mr-1 group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                수업 목록으로 돌아가기
+            </a>
+            <div
+                class="w-20 h-20 bg-cyan-accent/20 rounded-full flex items-center justify-center mx-auto mb-8 neon-glow-cyan wave-anim">
+                <span class="material-icons text-cyan-accent text-4xl">waves</span>
+            </div>
+            <h1 class="bebas text-7xl md:text-9xl leading-none text-white mb-4">AQUA <span
+                    class="text-cyan-accent">RHYTHM</span></h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                물 위에서 즐기는 저강도 고효율 피트니스! 관절에 무리 없이 온몸을 단련하는 아쿠아 줌바.
+            </p>
+        </div>
+    </section>
+
+    <!-- 수업 개요 -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div class="glass-card p-8 rounded-xl text-center">
+                <span class="material-icons text-cyan-accent text-3xl mb-4">timer</span>
+                <h4 class="bebas text-2xl mb-2">50분</h4>
+                <p class="text-slate-400 text-sm">수업 시간</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-center">
+                <span class="material-icons text-lime-accent text-3xl mb-4">local_fire_department</span>
+                <h4 class="bebas text-2xl mb-2">400~500 kcal</h4>
+                <p class="text-slate-400 text-sm">평균 소모 칼로리</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-center">
+                <span class="material-icons text-primary text-3xl mb-4">accessible</span>
+                <h4 class="bebas text-2xl mb-2">저강도</h4>
+                <p class="text-slate-400 text-sm">관절 부담 최소화</p>
+            </div>
+        </div>
+
+        <!-- 상세 설명 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="bebas text-5xl mb-6">수업 <span class="text-cyan-accent">소개</span></h2>
+                <p class="text-slate-300 leading-relaxed mb-6">
+                    Aqua Rhythm은 수영장에서 진행되는 특별한 줌바 수업입니다. 물의 저항력을 이용해 전신 근육을 고르게 단련하면서도,
+                    물의 부력 덕분에 관절과 뼈에 가해지는 충격을 최소화합니다.
+                </p>
+                <p class="text-slate-300 leading-relaxed mb-8">
+                    수영을 못해도 전혀 문제 없습니다! 가슴 높이의 얕은 물에서 진행되며, 물 위에서 느끼는 색다른 리듬감은
+                    육상에서의 운동과는 완전히 다른 재미를 선사합니다. 재활 중이거나 관절 건강이 걱정되는 분들에게 특히 추천합니다.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="px-4 py-2 rounded-full bg-cyan-accent/10 border border-cyan-accent/30 text-cyan-accent text-sm font-semibold">저강도
+                        운동</span>
+                    <span
+                        class="px-4 py-2 rounded-full bg-cyan-accent/10 border border-cyan-accent/30 text-cyan-accent text-sm font-semibold">관절
+                        보호</span>
+                    <span
+                        class="px-4 py-2 rounded-full bg-cyan-accent/10 border border-cyan-accent/30 text-cyan-accent text-sm font-semibold">수중
+                        저항</span>
+                    <span
+                        class="px-4 py-2 rounded-full bg-cyan-accent/10 border border-cyan-accent/30 text-cyan-accent text-sm font-semibold">전신
+                        운동</span>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-8 -right-8 w-64 h-64 bg-cyan-accent/15 rounded-full blur-3xl"></div>
+                <img class="relative z-10 w-full rounded-xl object-cover aspect-[4/3] border border-white/10"
+                    alt="Aqua Rhythm 수업 장면"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgUF3jPt7udcLUUwZnqG9rBiW5ZuiFxrrfP2d80ieInQtLnVYnYbXCNsaCi5Rqqh8z1M1aGfCU9LoWBcvM4eab8Lr6lVrishEJHbA5D3za90DCCwNmTjoHnvHT81SCMKTLB1AMDcPWOEjeEzc7jDxwqfxMlJQg11Dxv02_l3wAHtsIqPdy3GwcW3dsK1Xf8zzXsDsfvpGoYW6MEK_hxGlnSBSKGUnFlR22RVz0VFXMsTe6uesytv9sBPfm9zuUXtG39trVsjKKng" />
+            </div>
+        </div>
+    </section>
+
+    <!-- 이런 분께 추천 -->
+    <section class="bg-black/20 py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="bebas text-5xl text-center mb-16">이런 분께 <span class="text-cyan-accent">추천</span>합니다</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card p-8 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                    <span class="material-icons text-cyan-accent text-4xl mb-4">healing</span>
+                    <h4 class="font-bold text-lg mb-2">재활 운동</h4>
+                    <p class="text-slate-400 text-sm">부상 회복 중이거나 관절 건강이 걱정되는 분</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                    <span class="material-icons text-lime-accent text-4xl mb-4">elderly</span>
+                    <h4 class="font-bold text-lg mb-2">시니어 피트니스</h4>
+                    <p class="text-slate-400 text-sm">안전하고 즐거운 운동을 원하는 중장년층</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                    <span class="material-icons text-primary text-4xl mb-4">pool</span>
+                    <h4 class="font-bold text-lg mb-2">수중 운동 애호가</h4>
+                    <p class="text-slate-400 text-sm">물에서 운동하는 것을 좋아하는 분</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                    <span class="material-icons text-white text-4xl mb-4">spa</span>
+                    <h4 class="font-bold text-lg mb-2">부드러운 운동</h4>
+                    <p class="text-slate-400 text-sm">고강도 운동 대신 부드럽지만 효과적인 운동을 원하는 분</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 스케줄 & CTA -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="glass-card p-12 rounded-xl border border-cyan-accent/20 text-center">
+            <h2 class="bebas text-5xl mb-4">지금 바로 <span class="text-cyan-accent">시작</span>하세요</h2>
+            <p class="text-slate-400 mb-4">매주 월·목 오후 8시 | Pool 1</p>
+            <p class="text-slate-400 mb-8">강사: Mike</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="contact.html"
+                    class="bg-cyan-accent text-background-dark px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform neon-glow-cyan">
+                    수업 예약하기
+                </a>
+                <a href="classes.html"
+                    class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-white/20 transition-all">
+                    다른 수업 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/40 border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-600 text-xs tracking-widest">
+            © 2024 ZUMBAFLOW FITNESS PORTFOLIO. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ZumbaFlow | Strong Nation</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Bebas+Neue&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff00cc",
+                        "lime-accent": "#CCFF00",
+                        "cyan-accent": "#00FFFF",
+                        "background-light": "#f8f5f8",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "heading": ["Bebas Neue", "cursive"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .bebas {
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 204, 0.4);
+        }
+
+        .neon-glow-white {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        .pulse-bg {
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+
+        /* 전류 효과 애니메이션 */
+        @keyframes electric {
+
+            0%,
+            100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            }
+
+            50% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        .electric-text {
+            animation: electric 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-slate-100 antialiased overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="bebas text-3xl text-lime-accent tracking-wider">ZumbaFlow</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a class="hover:text-primary transition-colors" href="index.html">홈</a>
+                <a class="hover:text-primary transition-colors" href="about.html">소개</a>
+                <a class="text-primary transition-colors" href="classes.html">수업</a>
+                <a class="hover:text-primary transition-colors" href="gallery.html">갤러리</a>
+                <a class="hover:text-primary transition-colors" href="contact.html">문의</a>
+            </div>
+            <button
+                class="bg-primary text-white px-8 py-2.5 rounded-full font-bold uppercase tracking-wide hover:scale-105 transition-transform neon-glow-pink">
+                지금 예약
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/4 left-1/3 w-96 h-96 bg-white/15 rounded-full blur-[120px] pulse-bg"></div>
+            <div class="absolute bottom-1/4 right-1/3 w-80 h-80 bg-primary/15 rounded-full blur-[100px] pulse-bg"
+                style="animation-delay: 2s;"></div>
+        </div>
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <a href="classes.html"
+                class="inline-flex items-center text-sm text-slate-400 hover:text-white transition-colors mb-8 group">
+                <span class="material-icons mr-1 group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                수업 목록으로 돌아가기
+            </a>
+            <div
+                class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-8 neon-glow-white">
+                <span class="material-icons text-white text-4xl">electric_bolt</span>
+            </div>
+            <h1 class="bebas text-7xl md:text-9xl leading-none text-white mb-4 electric-text">STRONG <span
+                    class="text-white">NATION</span></h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                음악에 완벽히 동기화된 고강도 인터벌 트레이닝. 당신의 한계를 뛰어넘으세요!
+            </p>
+        </div>
+    </section>
+
+    <!-- 수업 개요 -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div class="glass-card p-8 rounded-xl text-center">
+                <span class="material-icons text-white text-3xl mb-4">timer</span>
+                <h4 class="bebas text-2xl mb-2">60분</h4>
+                <p class="text-slate-400 text-sm">수업 시간</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-center">
+                <span class="material-icons text-primary text-3xl mb-4">local_fire_department</span>
+                <h4 class="bebas text-2xl mb-2">700~1000 kcal</h4>
+                <p class="text-slate-400 text-sm">평균 소모 칼로리</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-center">
+                <span class="material-icons text-lime-accent text-3xl mb-4">speed</span>
+                <h4 class="bebas text-2xl mb-2">고강도</h4>
+                <p class="text-slate-400 text-sm">HIIT 기반 트레이닝</p>
+            </div>
+        </div>
+
+        <!-- 상세 설명 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="bebas text-5xl mb-6">수업 <span class="text-white electric-text">소개</span></h2>
+                <p class="text-slate-300 leading-relaxed mb-6">
+                    STRONG Nation™은 줌바를 만든 팀이 개발한 고강도 인터벌 트레이닝(HIIT) 프로그램입니다.
+                    기존 줌바와 다르게 순수한 댄스보다는 스쿼트, 런지, 킥복싱 등 전통적인 운동 동작을 음악에 맞춰 수행합니다.
+                </p>
+                <p class="text-slate-300 leading-relaxed mb-8">
+                    가장 큰 특징은 음악이 운동에 맞춰 제작되었다는 것입니다. 모든 강약, 템포 변화가 동작과 완벽하게 동기화되어 있어,
+                    음악이 당신을 자연스럽게 더 강하게 밀어붙입니다. 진정한 한계를 도전하고 싶은 분들을 위한 수업입니다.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white text-sm font-semibold">HIIT</span>
+                    <span
+                        class="px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white text-sm font-semibold">킥복싱</span>
+                    <span
+                        class="px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white text-sm font-semibold">플라이오메트릭</span>
+                    <span
+                        class="px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white text-sm font-semibold">코어
+                        트레이닝</span>
+                    <span
+                        class="px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white text-sm font-semibold">맨몸
+                        운동</span>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-8 -right-8 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+                <img class="relative z-10 w-full rounded-xl object-cover aspect-[4/3] border border-white/10"
+                    alt="Strong Nation 수업 장면"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHxjKJrGxHQ2UhjpexXVSo1a4BWjUZuuLl94LcK_rMBquZ3aKth1qBjT3MT9TPAcYCgorKeuw5SUtiWbCFbIQM_jFQUudWCyCXzqppKX8BbA-cg4yxppQyOWUT66-r62vV2y5ZFZoiqJMFpMpQVHANnSdcV5wZ0q892OLsr8O5t5TI6OpDy7dA0Q8RrzQq2TuHb0yRod81J_TBnNs3ssXCsfAudq77F2ONGdm5woEfy9mpAkmt5hmjJyaKzLToi7UwI305_X-CeQ" />
+            </div>
+        </div>
+    </section>
+
+    <!-- 이런 분께 추천 -->
+    <section class="bg-black/20 py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="bebas text-5xl text-center mb-16">이런 분께 <span class="electric-text">추천</span>합니다</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card p-8 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                    <span class="material-icons text-white text-4xl mb-4">whatshot</span>
+                    <h4 class="font-bold text-lg mb-2">강도 높은 운동</h4>
+                    <p class="text-slate-400 text-sm">극한까지 자신을 밀어붙이고 싶은 운동 매니아</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                    <span class="material-icons text-primary text-4xl mb-4">sports_martial_arts</span>
+                    <h4 class="font-bold text-lg mb-2">격투기 스타일</h4>
+                    <p class="text-slate-400 text-sm">킥복싱과 격투기 동작을 즐기는 분</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                    <span class="material-icons text-lime-accent text-4xl mb-4">bolt</span>
+                    <h4 class="font-bold text-lg mb-2">체력 증진</h4>
+                    <p class="text-slate-400 text-sm">심폐 지구력과 근력을 동시에 향상시키고 싶은 분</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                    <span class="material-icons text-cyan-accent text-4xl mb-4">headphones</span>
+                    <h4 class="font-bold text-lg mb-2">뮤직 싱크</h4>
+                    <p class="text-slate-400 text-sm">음악에 맞춰 몰입감 있는 운동 경험을 원하는 분</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 난이도 안내 -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="glass-card p-8 rounded-xl border border-white/10">
+            <div class="flex items-start space-x-4">
+                <span class="material-icons text-yellow-400 text-2xl mt-1">warning</span>
+                <div>
+                    <h4 class="font-bold text-lg mb-2">난이도 안내</h4>
+                    <p class="text-slate-400 leading-relaxed">
+                        Strong Nation은 <strong class="text-white">고강도 수업</strong>입니다.
+                        기본적인 체력이 갖춰져 있는 분들에게 추천하며, 줌바나 기타 피트니스 경험이 있으시면 더욱 좋습니다.
+                        처음 참여하시는 분은 본인의 페이스에 맞춰 강도를 조절하시면 됩니다.
+                        수업 전 충분한 수분 섭취와 스트레칭을 권장합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 스케줄 & CTA -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="glass-card p-12 rounded-xl border border-white/20 text-center">
+            <h2 class="bebas text-5xl mb-4 electric-text">지금 바로 시작하세요</h2>
+            <p class="text-slate-400 mb-4">매주 수요일 오후 7:30 | Studio A</p>
+            <p class="text-slate-400 mb-8">강사: Alex</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="contact.html"
+                    class="bg-white text-background-dark px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform neon-glow-white">
+                    수업 예약하기
+                </a>
+                <a href="classes.html"
+                    class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-white/20 transition-all">
+                    다른 수업 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/40 border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-600 text-xs tracking-widest">
+            © 2024 ZUMBAFLOW FITNESS PORTFOLIO. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+</body>
+
+</html>
