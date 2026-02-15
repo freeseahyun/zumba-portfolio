@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="dark" lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ZumbaFlow | 관리자</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Bebas+Neue&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff00cc",
+                        "lime-accent": "#CCFF00",
+                        "cyan-accent": "#00FFFF",
+                        "background-dark": "#1A1A1A",
+                        "surface": "#242424",
+                        "surface-2": "#2E2E2E",
+                    },
+                    fontFamily: { "display": ["Plus Jakarta Sans", "sans-serif"], "heading": ["Bebas Neue", "cursive"] },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .bebas {
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 204, 0.4);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* 모달 오버레이 */
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        /* 사이드바 활성 메뉴 */
+        .nav-active {
+            background: rgba(255, 0, 204, 0.15);
+            border-left: 3px solid #ff00cc;
+            color: #ff00cc;
+        }
+
+        /* 트랜지션 */
+        .fade-in {
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 입력 필드 스타일 */
+        input,
+        select,
+        textarea {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            color: white !important;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #ff00cc !important;
+            outline: none !important;
+            box-shadow: 0 0 0 2px rgba(255, 0, 204, 0.2) !important;
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-slate-100 antialiased overflow-x-hidden">
+
+    <!-- 로그인 화면 -->
+    <div id="loginScreen" class="min-h-screen flex items-center justify-center">
+        <div class="glass-card p-10 rounded-xl w-full max-w-md text-center fade-in">
+            <div
+                class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6 neon-glow-pink">
+                <span class="material-icons text-primary text-3xl">admin_panel_settings</span>
+            </div>
+            <h1 class="bebas text-4xl mb-2">ZUMBAFLOW</h1>
+            <p class="text-slate-400 mb-8">관리자 로그인</p>
+            <div class="space-y-4">
+                <input id="loginId" type="text" placeholder="관리자 ID" class="w-full px-4 py-3 rounded-lg text-sm" />
+                <input id="loginPw" type="password" placeholder="비밀번호" class="w-full px-4 py-3 rounded-lg text-sm"
+                    onkeydown="if(event.key==='Enter')doLogin()" />
+                <p id="loginError" class="text-red-400 text-sm hidden">아이디 또는 비밀번호가 올바르지 않습니다.</p>
+                <button onclick="doLogin()"
+                    class="w-full bg-primary text-white py-3 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform neon-glow-pink">로그인</button>
+            </div>
+            <p class="text-slate-500 text-xs mt-6">기본 계정: admin / admin1234</p>
+        </div>
+    </div>
+
+    <!-- 관리자 대시보드 (로그인 후 표시) -->
+    <div id="dashboard" class="hidden min-h-screen flex">
+        <!-- 사이드바 -->
+        <aside class="w-64 bg-surface border-r border-white/5 flex flex-col fixed h-full z-30">
+            <div class="p-6 border-b border-white/5">
+                <span class="bebas text-2xl text-lime-accent tracking-wider">ZumbaFlow</span>
+                <span class="text-xs text-slate-500 block mt-1">관리자 패널</span>
+            </div>
+            <nav class="flex-1 py-4 space-y-1 px-3" id="sideNav">
+                <button onclick="showSection('dashboard-home')" data-section="dashboard-home"
+                    class="nav-active w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors">
+                    <span class="material-icons text-lg">dashboard</span><span>대시보드</span>
+                </button>
+                <button onclick="showSection('instructors')" data-section="instructors"
+                    class="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium text-slate-400 hover:bg-white/5 transition-colors">
+                    <span class="material-icons text-lg">person</span><span>강사 관리</span>
+                </button>
+                <button onclick="showSection('classes')" data-section="classes"
+                    class="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium text-slate-400 hover:bg-white/5 transition-colors">
+                    <span class="material-icons text-lg">event</span><span>수업 스케줄</span>
+                </button>
+                <button onclick="showSection('locations')" data-section="locations"
+                    class="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium text-slate-400 hover:bg-white/5 transition-colors">
+                    <span class="material-icons text-lg">location_on</span><span>장소 관리</span>
+                </button>
+                <button onclick="showSection('settings')" data-section="settings"
+                    class="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium text-slate-400 hover:bg-white/5 transition-colors">
+                    <span class="material-icons text-lg">settings</span><span>사이트 설정</span>
+                </button>
+            </nav>
+            <div class="p-4 border-t border-white/5">
+                <button onclick="doLogout()"
+                    class="w-full flex items-center space-x-2 px-4 py-2 text-sm text-slate-400 hover:text-red-400 transition-colors">
+                    <span class="material-icons text-lg">logout</span><span>로그아웃</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- 메인 콘텐츠 영역 -->
+        <main class="flex-1 ml-64 p-8">
+            <!-- 상단 바 -->
+            <div class="flex justify-between items-center mb-8">
+                <h2 id="pageTitle" class="bebas text-3xl">대시보드</h2>
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" target="_blank"
+                        class="text-sm text-slate-400 hover:text-primary transition-colors flex items-center space-x-1">
+                        <span class="material-icons text-sm">open_in_new</span><span>사이트 보기</span>
+                    </a>
+                    <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+                        <span class="material-icons text-primary text-sm">person</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 섹션: 대시보드 홈 -->
+            <section id="sec-dashboard-home" class="fade-in">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="glass-card p-6 rounded-xl">
+                        <p class="text-slate-400 text-sm mb-1">등록 강사</p>
+                        <p id="statInstructors" class="bebas text-3xl text-primary">0</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <p class="text-slate-400 text-sm mb-1">주간 수업</p>
+                        <p id="statClasses" class="bebas text-3xl text-cyan-accent">0</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <p class="text-slate-400 text-sm mb-1">등록 장소</p>
+                        <p id="statLocations" class="bebas text-3xl text-lime-accent">0</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <p class="text-slate-400 text-sm mb-1">전체 페이지</p>
+                        <p class="bebas text-3xl text-white">9</p>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-xl">
+                    <h3 class="font-bold mb-4">빠른 작업</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <button onclick="showSection('instructors');openModal('instructor')"
+                            class="p-4 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-colors text-left"><span
+                                class="material-icons text-primary mb-2">person_add</span>
+                            <p class="font-semibold text-sm">강사 추가</p>
+                        </button>
+                        <button onclick="showSection('classes');openModal('class')"
+                            class="p-4 rounded-lg bg-cyan-accent/10 border border-cyan-accent/20 hover:bg-cyan-accent/20 transition-colors text-left"><span
+                                class="material-icons text-cyan-accent mb-2">add_circle</span>
+                            <p class="font-semibold text-sm">수업 추가</p>
+                        </button>
+                        <button onclick="showSection('locations');openModal('location')"
+                            class="p-4 rounded-lg bg-lime-accent/10 border border-lime-accent/20 hover:bg-lime-accent/20 transition-colors text-left"><span
+                                class="material-icons text-lime-accent mb-2">add_location</span>
+                            <p class="font-semibold text-sm">장소 추가</p>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 섹션: 강사 관리 -->
+            <section id="sec-instructors" class="hidden fade-in">
+                <div class="flex justify-between items-center mb-6">
+                    <p class="text-slate-400">등록된 강사 목록</p>
+                    <button onclick="openModal('instructor')"
+                        class="bg-primary text-white px-6 py-2 rounded-full font-bold text-sm hover:scale-105 transition-transform neon-glow-pink flex items-center space-x-1">
+                        <span class="material-icons text-sm">add</span><span>강사 추가</span>
+                    </button>
+                </div>
+                <div id="instructorList" class="space-y-4"></div>
+            </section>
+
+            <!-- 섹션: 수업 스케줄 -->
+            <section id="sec-classes" class="hidden fade-in">
+                <div class="flex justify-between items-center mb-6">
+                    <p class="text-slate-400">주간 수업 스케줄</p>
+                    <button onclick="openModal('class')"
+                        class="bg-cyan-accent text-background-dark px-6 py-2 rounded-full font-bold text-sm hover:scale-105 transition-transform flex items-center space-x-1">
+                        <span class="material-icons text-sm">add</span><span>수업 추가</span>
+                    </button>
+                </div>
+                <div id="classList" class="space-y-4"></div>
+            </section>
+
+            <!-- 섹션: 장소 관리 -->
+            <section id="sec-locations" class="hidden fade-in">
+                <div class="flex justify-between items-center mb-6">
+                    <p class="text-slate-400">수업 장소 목록</p>
+                    <button onclick="openModal('location')"
+                        class="bg-lime-accent text-background-dark px-6 py-2 rounded-full font-bold text-sm hover:scale-105 transition-transform flex items-center space-x-1">
+                        <span class="material-icons text-sm">add</span><span>장소 추가</span>
+                    </button>
+                </div>
+                <div id="locationList" class="space-y-4"></div>
+            </section>
+
+            <!-- 섹션: 사이트 설정 -->
+            <section id="sec-settings" class="hidden fade-in">
+                <div class="glass-card p-8 rounded-xl space-y-6">
+                    <div><label class="text-sm text-slate-400 block mb-2">사이트 이름</label><input id="setSiteName"
+                            type="text" value="ZumbaFlow" class="w-full px-4 py-3 rounded-lg text-sm" /></div>
+                    <div><label class="text-sm text-slate-400 block mb-2">대표 연락처</label><input id="setPhone" type="text"
+                            value="02-1234-5678" class="w-full px-4 py-3 rounded-lg text-sm" /></div>
+                    <div><label class="text-sm text-slate-400 block mb-2">대표 이메일</label><input id="setEmail"
+                            type="email" value="info@zumbaflow.com" class="w-full px-4 py-3 rounded-lg text-sm" /></div>
+                    <div><label class="text-sm text-slate-400 block mb-2">소셜 미디어 - Instagram</label><input id="setInsta"
+                            type="text" value="@zumbaflow" class="w-full px-4 py-3 rounded-lg text-sm" /></div>
+                    <div><label class="text-sm text-slate-400 block mb-2">관리자 비밀번호 변경</label><input id="setNewPw"
+                            type="password" placeholder="새 비밀번호 (미입력 시 유지)"
+                            class="w-full px-4 py-3 rounded-lg text-sm" /></div>
+                    <button onclick="saveSettings()"
+                        class="bg-primary text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform neon-glow-pink">설정
+                        저장</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 모달 -->
+    <div id="modal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-overlay">
+        <div
+            class="bg-surface rounded-xl p-8 w-full max-w-lg max-h-[80vh] overflow-y-auto border border-white/10 fade-in">
+            <div class="flex justify-between items-center mb-6">
+                <h3 id="modalTitle" class="font-bold text-xl"></h3>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white"><span
+                        class="material-icons">close</span></button>
+            </div>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
